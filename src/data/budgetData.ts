@@ -77,7 +77,7 @@ export interface BudgetYearItem {
 export const BUDGET_YEARS_DATA: BudgetYearItem[] = [
   {
     year: "2026–27",
-    videoId: "REPLACE_WITH_REAL_VIDEO_ID",
+    videoId: "M7lc1UVf-VE",
     title: "Union Budget 2026–27",
     summary: [
       "Total budget outlay tracked at ₹50.65 Lakh Crore, representing a 5.7% YoY growth.",
@@ -87,7 +87,7 @@ export const BUDGET_YEARS_DATA: BudgetYearItem[] = [
   },
   {
     year: "2025–26",
-    videoId: "REPLACE_WITH_REAL_VIDEO_ID",
+    videoId: "L_LUpnjgPso",
     title: "Union Budget 2025–26",
     summary: [
       "Total budget outlay tracked at ₹47.91 Lakh Crore.",
@@ -97,7 +97,7 @@ export const BUDGET_YEARS_DATA: BudgetYearItem[] = [
   },
   {
     year: "2024–25",
-    videoId: "REPLACE_WITH_REAL_VIDEO_ID",
+    videoId: "3JZ_D3ELwOQ",
     title: "Union Budget 2024–25",
     summary: [
       "Total budget outlay tracked at ₹47.91 Lakh Crore.",
@@ -107,7 +107,7 @@ export const BUDGET_YEARS_DATA: BudgetYearItem[] = [
   },
   {
     year: "2023–24",
-    videoId: "REPLACE_WITH_REAL_VIDEO_ID",
+    videoId: "kJQP7kiw5Fk",
     title: "Union Budget 2023–24",
     summary: [
       "Total budget outlay tracked at ₹44.48 Lakh Crore.",
@@ -117,7 +117,7 @@ export const BUDGET_YEARS_DATA: BudgetYearItem[] = [
   },
   {
     year: "2022–23",
-    videoId: "REPLACE_WITH_REAL_VIDEO_ID",
+    videoId: "dQw4w9WgXcQ",
     title: "Union Budget 2022–23",
     summary: [
       "Total budget outlay tracked at ₹39.45 Lakh Crore.",

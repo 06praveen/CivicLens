@@ -1,9 +1,13 @@
-import { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import { BUDGET_YEARS_DATA } from "@/data/budgetData";
 
 export function BudgetYearSection() {
   const [activeYearIndex, setActiveYearIndex] = useState<number>(0);
+  const [isDragging, setIsDragging] = useState<boolean>(false);
+  const [startX, setStartX] = useState<number>(0);
+  const [scrollLeftState, setScrollLeftState] = useState<number>(0);
+
   const containerRef = useRef<HTMLDivElement | null>(null);
   const panelRefs = useRef<(HTMLDivElement | null)[]>([]);
 
@@ -39,6 +43,31 @@ export function BudgetYearSection() {
     };
   }, []);
 
+  // ── Mouse Cursor Drag to Scroll Handlers ──
+  const handleMouseDown = (e: React.MouseEvent) => {
+    if (!containerRef.current) return;
+    if (e.button !== 0) return; // Only main click
+    setIsDragging(true);
+    setStartX(e.pageX - containerRef.current.offsetLeft);
+    setScrollLeftState(containerRef.current.scrollLeft);
+  };
+
+  const handleMouseLeave = () => {
+    setIsDragging(false);
+  };
+
+  const handleMouseUp = () => {
+    setIsDragging(false);
+  };
+
+  const handleMouseMove = (e: React.MouseEvent) => {
+    if (!isDragging || !containerRef.current) return;
+    e.preventDefault();
+    const x = e.pageX - containerRef.current.offsetLeft;
+    const walk = (x - startX) * 1.5;
+    containerRef.current.scrollLeft = scrollLeftState - walk;
+  };
+
   const activeYear = BUDGET_YEARS_DATA[activeYearIndex] || BUDGET_YEARS_DATA[0];
 
   return (
@@ -62,57 +91,20 @@ export function BudgetYearSection() {
           Watch the Union Budget presentation and explore a concise summary of the key announcements, allocations and priorities.
         </p>
 
-        {/* ── Active Year Visual Indicator Bar (Non-clickable / Visual Only) ── */}
-        <div className="mb-5 flex flex-wrap items-center justify-between gap-3">
-          <div 
-            aria-hidden="true" 
-            className="inline-flex items-center gap-3 sm:gap-5 py-2 px-4 bg-institutional/5 border border-rule rounded-xs text-xs select-none pointer-events-none shadow-2xs"
-          >
-            <span className="font-bold text-institutional uppercase tracking-widest text-[11px]">
-              Active Year:
-            </span>
-            <div className="flex items-center gap-3 sm:gap-4">
-              {BUDGET_YEARS_DATA.map((item, idx) => {
-                const isActive = idx === activeYearIndex;
-                return (
-                  <div key={item.year} className="flex items-center gap-1.5">
-                    <span
-                      className={`inline-block w-2.5 h-2.5 rounded-full transition-all duration-200 ${
-                        isActive
-                          ? "bg-saffron ring-2 ring-saffron/30 scale-110"
-                          : "bg-institutional/25"
-                      }`}
-                    />
-                    <span
-                      className={`font-semibold tracking-tight ${
-                        isActive
-                          ? "text-institutional font-bold"
-                          : "text-muted-foreground/60"
-                      }`}
-                    >
-                      {item.year}
-                    </span>
-                  </div>
-                );
-              })}
-            </div>
-          </div>
-
-          {/* Horizontal Scroll Hint */}
-          <div className="text-xs text-muted-foreground/80 flex items-center gap-1.5 font-medium select-none">
-            <svg className="w-4 h-4 text-saffron shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
-            </svg>
-            <span>Scroll horizontally for other years ({activeYear.year})</span>
-          </div>
-        </div>
-
-        {/* ── Horizontal Scroll Container ── */}
+        {/* ── Horizontal Scroll Container (Mouse Cursor Drag Scrollable) ── */}
         <div
           ref={containerRef}
           tabIndex={0}
+          onMouseDown={handleMouseDown}
+          onMouseLeave={handleMouseLeave}
+          onMouseUp={handleMouseUp}
+          onMouseMove={handleMouseMove}
           aria-label={`Horizontal list of budget years. Currently showing Union Budget ${activeYear.year}`}
-          className="flex flex-row overflow-x-auto snap-x snap-mandatory scrollbar-thin scrollbar-thumb-institutional/30 scrollbar-track-rule/40 border border-rule rounded-xs bg-white shadow-xs focus:outline-none focus:ring-2 focus:ring-institutional/20"
+          className={`flex flex-row overflow-x-auto border border-rule rounded-xs bg-white shadow-xs focus:outline-none focus:ring-2 focus:ring-institutional/20 transition-all select-none ${
+            isDragging
+              ? "cursor-grabbing scroll-auto"
+              : "cursor-grab snap-x snap-mandatory scrollbar-thin scrollbar-thumb-institutional/30 scrollbar-track-rule/40"
+          }`}
         >
           {BUDGET_YEARS_DATA.map((item, idx) => (
             <div
@@ -137,33 +129,15 @@ export function BudgetYearSection() {
                     </span>
                   </div>
 
-                  <div className="relative aspect-video w-full rounded-xs overflow-hidden border border-rule bg-institutional/95 shadow-sm group">
-                    {item.videoId && item.videoId !== "REPLACE_WITH_REAL_VIDEO_ID" ? (
-                      <iframe
-                        src={`https://www.youtube-nocookie.com/embed/${item.videoId}?rel=0`}
-                        title={`Union Budget ${item.year} Presentation Video`}
-                        className="w-full h-full border-0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowFullScreen
-                      />
-                    ) : (
-                      <div className="absolute inset-0 flex flex-col items-center justify-center p-6 text-center text-white bg-gradient-to-br from-institutional-dark via-institutional to-institutional/90">
-                        <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-white/10 border border-white/20 flex items-center justify-center mb-3 group-hover:scale-105 transition-transform shadow-inner">
-                          <svg className="w-7 h-7 sm:w-8 sm:h-8 text-saffron fill-current ml-1" viewBox="0 0 24 24">
-                            <path d="M8 5v14l11-7z" />
-                          </svg>
-                        </div>
-                        <h3 className="text-base sm:text-lg font-bold text-white mb-1">
-                          Union Budget {item.year}
-                        </h3>
-                        <p className="text-xs text-white/75 max-w-sm mb-3 leading-relaxed">
-                          Watch the official budget speech and video presentation.
-                        </p>
-                        <span className="inline-block px-2.5 py-1 text-[11px] font-mono rounded-xs bg-white/10 text-white/90 border border-white/15">
-                          YouTube Video ID: {item.videoId}
-                        </span>
-                      </div>
-                    )}
+                  <div className={`relative aspect-video w-full rounded-xs overflow-hidden border border-rule bg-black shadow-sm ${isDragging ? "pointer-events-none" : ""}`}>
+                    <iframe
+                      src={`https://www.youtube.com/embed/${item.videoId}`}
+                      title={`Union Budget ${item.year} Presentation Video`}
+                      className="w-full h-full border-0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      referrerPolicy="strict-origin-when-cross-origin"
+                      allowFullScreen
+                    />
                   </div>
                 </div>
 
