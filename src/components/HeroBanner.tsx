@@ -1,15 +1,14 @@
 import { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
-import { useApp } from "@/context/AppContext";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import redFort from "@/assets/red-fort.jpg";
 import hampiChariot from "@/assets/hampi-chariot.jpg";
 import indiaGate from "@/assets/india-gate.png";
 
 const bannerImages = [
-  { src: redFort,      alt: "Red Fort, New Delhi",               fit: "object-cover object-center" },
-  { src: hampiChariot, alt: "Hampi Stone Chariot Monument",       fit: "object-cover object-center" },
-  { src: indiaGate,    alt: "India Gate, New Delhi",              fit: "object-cover object-center" },
+  { src: redFort,      alt: "Red Fort, New Delhi",         fit: "object-cover object-center" },
+  { src: hampiChariot, alt: "Hampi Stone Chariot Monument", fit: "object-cover object-center" },
+  { src: indiaGate,    alt: "India Gate, New Delhi",        fit: "object-cover object-center" },
 ];
 
 export function HeroBanner() {
@@ -39,7 +38,6 @@ export function HeroBanner() {
     const touchEndX = e.changedTouches[0].clientX;
     const diff = touchStartX.current - touchEndX;
 
-    // Minimum swipe distance
     if (Math.abs(diff) > 50) {
       if (diff > 0) {
         nextSlide();
@@ -58,14 +56,14 @@ export function HeroBanner() {
       aria-roledescription="carousel"
       aria-label="Historical monuments of India"
     >
-      <div className="relative h-[420px] w-full sm:h-[480px] lg:h-[540px] bg-institutional-dark">
+      <div className="relative h-[380px] w-full sm:h-[440px] lg:h-[480px] bg-institutional-dark">
         {bannerImages.map((item, idx) => (
           <img
             key={idx}
             src={item.src}
             alt={item.alt}
             width={1920}
-            height={560}
+            height={480}
             className={`absolute inset-0 h-full w-full ${item.fit} transition-opacity duration-[1400ms] ease-in-out ${
               idx === current ? "opacity-100 z-0" : "opacity-0 -z-10"
             }`}
@@ -74,10 +72,10 @@ export function HeroBanner() {
         ))}
 
         {/* Dark overlay for text readability */}
-        <div className="absolute inset-0 bg-gradient-to-r from-institutional-dark/80 via-institutional-dark/50 to-transparent z-10 pointer-events-none" />
+        <div className="absolute inset-0 bg-gradient-to-r from-institutional-dark/85 via-institutional-dark/60 to-transparent z-10 pointer-events-none" />
         <div className="absolute inset-0 bg-institutional-dark/30 z-10 pointer-events-none" />
 
-        {/* Content - Static while images change */}
+        {/* ── Original Hero Content ── */}
         <div className="absolute inset-0 flex items-center z-20">
           <div className="portal-container w-full">
             <h1 className="mt-3 max-w-2xl text-2xl font-bold leading-[1.25] tracking-[0.02em] text-white sm:text-4xl lg:text-5xl uppercase">
@@ -106,31 +104,19 @@ export function HeroBanner() {
           </div>
         </div>
 
-        {/* Carousel Controls */}
-        <div className="absolute inset-x-0 bottom-6 z-30 flex justify-center gap-2">
-          {bannerImages.map((_, idx) => (
-            <button
-              key={idx}
-              onClick={() => setCurrent(idx)}
-              className={`h-2.5 rounded-full transition-all ${
-                idx === current ? "w-8 bg-saffron" : "w-2.5 bg-white/50 hover:bg-white/80"
-              }`}
-              aria-label={`Go to slide ${idx + 1}`}
-            />
-          ))}
-        </div>
 
-        {/* Previous/Next Buttons */}
+
+        {/* Carousel Previous/Next Buttons */}
         <button
           onClick={prevSlide}
-          className="absolute left-2 sm:left-6 top-1/2 -translate-y-1/2 z-30 p-2 rounded-full bg-black/20 text-white/70 hover:bg-black/50 hover:text-white backdrop-blur-sm transition-all opacity-0 group-hover:opacity-100"
+          className="absolute left-2 sm:left-6 top-1/2 -translate-y-1/2 z-30 p-2 rounded-full bg-black/20 text-white/70 hover:bg-black/50 hover:text-white backdrop-blur-sm transition-all opacity-0 group-hover:opacity-100 cursor-pointer"
           aria-label="Previous slide"
         >
           <ChevronLeft className="h-6 w-6 sm:h-8 sm:w-8" />
         </button>
         <button
           onClick={nextSlide}
-          className="absolute right-2 sm:right-6 top-1/2 -translate-y-1/2 z-30 p-2 rounded-full bg-black/20 text-white/70 hover:bg-black/50 hover:text-white backdrop-blur-sm transition-all opacity-0 group-hover:opacity-100"
+          className="absolute right-2 sm:right-6 top-1/2 -translate-y-1/2 z-30 p-2 rounded-full bg-black/20 text-white/70 hover:bg-black/50 hover:text-white backdrop-blur-sm transition-all opacity-0 group-hover:opacity-100 cursor-pointer"
           aria-label="Next slide"
         >
           <ChevronRight className="h-6 w-6 sm:h-8 sm:w-8" />
@@ -139,4 +125,3 @@ export function HeroBanner() {
     </section>
   );
 }
-

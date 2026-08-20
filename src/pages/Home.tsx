@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { useApp } from "@/context/AppContext";
 import { HeroBanner } from "@/components/HeroBanner";
+import { HomeSearchBar } from "@/components/HomeSearchBar";
 import { PageLayout } from "@/components/PageLayout";
 import { BudgetYearSection } from "@/components/BudgetYearSection";
 
@@ -53,10 +54,14 @@ export default function Home() {
 
   return (
     <PageLayout>
+      {/* ── Hero Monument Slideshow ── */}
       <HeroBanner />
 
-      {/* ── Quick Access Feature Cards ── */}
-      <section className="portal-container mt-12 mb-10">
+      {/* ── Full-Width India.gov.in Style Search Bar (Between Hero Banner & Quick Access Cards) ── */}
+      <HomeSearchBar />
+
+      {/* ── Quick Access Feature Cards ("Budget at a Glance", "Explore Budget", etc.) ── */}
+      <section className="portal-container mt-10 mb-10">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
           {quickAccessCards.map((card, i) => (
             <div key={i} className="flex flex-col bg-white border border-rule rounded-sm shadow-xs hover:shadow-md transition-shadow group relative overflow-hidden">
@@ -80,7 +85,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── Year-wise Union Budget Section ── */}
+      {/* ── Year-wise Union Budget Parliament Speeches Section ── */}
       <BudgetYearSection />
 
       {/* ── How CivicLens Helps ── */}
@@ -109,4 +114,3 @@ export default function Home() {
     </PageLayout>
   );
 }
-
