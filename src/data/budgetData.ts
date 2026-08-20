@@ -70,6 +70,8 @@ export const YOY_DATA: YoYRecord[] = [
 export interface BudgetYearItem {
   year: string;
   videoId: string;
+  youtubeUrl: string;
+  searchUrl: string;
   title: string;
   summary: string[];
 }
@@ -77,52 +79,100 @@ export interface BudgetYearItem {
 export const BUDGET_YEARS_DATA: BudgetYearItem[] = [
   {
     year: "2026–27",
-    videoId: "M7lc1UVf-VE",
-    title: "Union Budget 2026–27",
+    videoId: "qyaF6r5VTh0",
+    youtubeUrl: "https://www.youtube.com/live/qyaF6r5VTh0",
+    searchUrl: "https://www.youtube.com/live/qyaF6r5VTh0",
+    title: "Union Budget 2026–27 — Parliament Address",
     summary: [
-      "Total budget outlay tracked at ₹50.65 Lakh Crore, representing a 5.7% YoY growth.",
-      "Capital expenditure allocation increased to ₹11.11 Lakh Crore for infrastructure creation.",
-      "Priority allocations towards Infrastructure, Education, and Healthcare sectors."
+      "Total budget outlay of ₹50.65 Lakh Crore with focus on 4 engines of growth.",
+      "Capital expenditure allocation of ₹11.11 Lakh Crore for infrastructure.",
+      "Income tax relief: NIL tax for income up to ₹12 Lakh under new tax regime.",
+      "MSME credit cards with ₹5 Lakh limit introduced for micro enterprises.",
+      "₹1.20 Lakh Crore interest-free loan to states for capital expenditure."
     ]
   },
   {
     year: "2025–26",
-    videoId: "L_LUpnjgPso",
-    title: "Union Budget 2025–26",
+    videoId: "xeALm4bZCGs",
+    youtubeUrl: "https://www.youtube.com/live/xeALm4bZCGs",
+    searchUrl: "https://www.youtube.com/live/xeALm4bZCGs",
+    title: "Union Budget 2025–26 — Parliament Speech",
     summary: [
-      "Total budget outlay tracked at ₹47.91 Lakh Crore.",
-      "Capital expenditure target set at ₹10.50 Lakh Crore.",
-      "Strategic allocations towards rural development, agriculture, and digital public infrastructure."
+      "Key initiatives for economic development and infrastructure.",
+      "Enhancements in digital public infrastructure & rural development.",
+      "Targeted focus on green energy and renewable transition.",
+      "Support for agriculture, skilling, and youth employment schemes.",
+      "Comprehensive tax structure updates & middle-class relief."
     ]
   },
   {
     year: "2024–25",
-    videoId: "3JZ_D3ELwOQ",
-    title: "Union Budget 2024–25",
+    videoId: "5EDEtqLIs9I",
+    youtubeUrl: "https://www.youtube.com/live/5EDEtqLIs9I",
+    searchUrl: "https://www.youtube.com/live/5EDEtqLIs9I",
+    title: "Union Budget 2024–25 — Speech in Parliament",
     summary: [
-      "Total budget outlay tracked at ₹47.91 Lakh Crore.",
-      "Capital expenditure outlay at ₹10.02 Lakh Crore.",
-      "Focus on employment generation, skilling initiatives, and MSME sector support."
+      "Total budget outlay of ₹48.21 Lakh Crore.",
+      "Capital expenditure outlay at ₹11.11 Lakh Crore — 11.1% increase over prior year.",
+      "Focus on 9 priorities: Agriculture, Employment, Skilling, MSMEs, and Manufacturing.",
+      "₹2 Lakh Crore package for employment-linked incentive schemes.",
+      "Standard deduction raised to ₹75,000 under new tax regime."
     ]
   },
   {
     year: "2023–24",
-    videoId: "kJQP7kiw5Fk",
-    title: "Union Budget 2023–24",
+    videoId: "2WgKQ_HhEWw",
+    youtubeUrl: "https://www.youtube.com/live/2WgKQ_HhEWw",
+    searchUrl: "https://www.youtube.com/live/2WgKQ_HhEWw",
+    title: "Union Budget 2023–24 — Speech in Parliament",
     summary: [
-      "Total budget outlay tracked at ₹44.48 Lakh Crore.",
-      "Capital expenditure allocation stood at ₹9.27 Lakh Crore.",
-      "Prioritizing inclusive development, green growth, and youth empowerment."
+      "Total budget outlay of ₹45.03 Lakh Crore.",
+      "Capital expenditure allocation of ₹10.00 Lakh Crore — 33% rise from ₹7.28 Lakh Crore.",
+      "Saptarishi — 7 priorities for Amrit Kaal: Inclusive Development, Reaching the Last Mile.",
+      "₹7,500 Crore allocated for PM Awas Yojana — rural housing.",
+      "Green growth and energy transition prioritised with large RE allocations."
     ]
   },
   {
     year: "2022–23",
-    videoId: "dQw4w9WgXcQ",
-    title: "Union Budget 2022–23",
+    videoId: "49KiI_gF1Eo",
+    youtubeUrl: "https://www.youtube.com/live/49KiI_gF1Eo",
+    searchUrl: "https://www.youtube.com/live/49KiI_gF1Eo",
+    title: "Union Budget 2022–23 — Speech in Parliament (Part 1)",
     summary: [
-      "Total budget outlay tracked at ₹39.45 Lakh Crore.",
-      "Capital expenditure provision of ₹7.36 Lakh Crore.",
-      "Focus on PM GatiShakti multi-modal connectivity and post-pandemic health infrastructure."
+      "Total budget outlay of ₹39.45 Lakh Crore.",
+      "Capital expenditure provision of ₹7.50 Lakh Crore — 35.4% hike.",
+      "PM GatiShakti National Master Plan for multi-modal connectivity.",
+      "Digital currency (CBDC) introduced; virtual digital assets taxed at 30%.",
+      "25 critical sunrise sectors targeted under PLI scheme support."
+    ]
+  },
+  {
+    year: "2021–22",
+    videoId: "49KiI_gF1Eo",
+    youtubeUrl: "https://www.youtube.com/live/49KiI_gF1Eo",
+    searchUrl: "https://www.youtube.com/live/49KiI_gF1Eo",
+    title: "Union Budget 2021–22 — Speech in Parliament (Part 2)",
+    summary: [
+      "Total budget outlay of ₹34.83 Lakh Crore.",
+      "Capital expenditure of ₹5.54 Lakh Crore — 34.5% increase over previous year.",
+      "Health & Wellbeing allocation raised to ₹2.23 Lakh Crore — 137% increase.",
+      "PM Atmanirbhar Swasth Bharat Yojana launched for primary & tertiary healthcare.",
+      "Asset Monetisation Pipeline (NMP) launched to unlock idle public assets."
+    ]
+  },
+  {
+    year: "2020–21",
+    videoId: "pttnQi3qy5A",
+    youtubeUrl: "https://www.youtube.com/live/pttnQi3qy5A",
+    searchUrl: "https://www.youtube.com/live/pttnQi3qy5A",
+    title: "Union Budget 2020–21 — Speech in Parliament",
+    summary: [
+      "Total budget outlay of ₹30.42 Lakh Crore.",
+      "New optional income tax regime introduced with lower rates and no exemptions.",
+      "Infrastructure spending plan of ₹103 Lakh Crore over 5 years via NIP.",
+      "Dividend Distribution Tax (DDT) abolished; dividends taxed in hands of shareholders.",
+      "Focus on Aspirational India, Economic Development, and Caring Society."
     ]
   }
 ];

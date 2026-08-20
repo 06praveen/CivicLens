@@ -7,14 +7,14 @@ export function PortalFooter() {
 
   return (
     <footer className="border-t-4 border-saffron bg-institutional-dark text-institutional-foreground">
-      <div className="portal-container grid gap-8 py-10 md:grid-cols-4">
+      <div className="portal-container grid gap-8 py-10 grid-cols-1 md:grid-cols-3 items-start">
         {/* Brand Column */}
         <div>
           <NavLink to="/" className="flex items-center gap-3 hover:opacity-90 transition-opacity">
             <CivicLensMark className="h-11 w-11" />
             <span className="text-lg font-bold tracking-[0.14em]">CIVICLENS</span>
           </NavLink>
-          <p className="mt-3 text-xs leading-relaxed text-institutional-foreground/75">
+          <p className="mt-3 text-xs leading-relaxed text-institutional-foreground/75 max-w-sm">
             {t("footer_tagline")}
           </p>
           {/* Tiranga strip */}
@@ -30,7 +30,7 @@ export function PortalFooter() {
           <h3 className="label-caps border-b border-institutional-foreground/25 pb-2 text-saffron mb-3">
             Budget Data
           </h3>
-          <ul className="space-y-2 text-xs">
+          <ul className="space-y-2.5 text-xs">
             <li><NavLink to="/budget-at-a-glance" className="hover:text-saffron transition-colors">Budget at a Glance</NavLink></li>
             <li><NavLink to="/explore-budget" className="hover:text-saffron transition-colors">Explore Budget</NavLink></li>
             <li><NavLink to="/departments" className="hover:text-saffron transition-colors">Departments</NavLink></li>
@@ -41,27 +41,15 @@ export function PortalFooter() {
         {/* Column 2 — Citizen Tools */}
         <div>
           <h3 className="label-caps border-b border-institutional-foreground/25 pb-2 text-saffron mb-3">
-            Citizen Tools
+            Citizen Tools & Engagement
           </h3>
-          <ul className="space-y-2 text-xs">
+          <ul className="space-y-2.5 text-xs">
             <li><NavLink to="/ask-civiclens" className="hover:text-saffron transition-colors">Ask CivicLens AI</NavLink></li>
             <li><NavLink to="/compare" className="hover:text-saffron transition-colors">Compare Spending</NavLink></li>
             <li><NavLink to="/glossary" className="hover:text-saffron transition-colors">Budget Glossary</NavLink></li>
             <li><NavLink to="/alerts" className="hover:text-saffron transition-colors">My Budget Alerts</NavLink></li>
             <li><NavLink to="/rti-assistant" className="hover:text-saffron transition-colors">RTI Application Assistant</NavLink></li>
-          </ul>
-        </div>
-
-        {/* Column 3 — Administration & Engagement */}
-        <div>
-          <h3 className="label-caps border-b border-institutional-foreground/25 pb-2 text-saffron mb-3">
-            Portal & Admin
-          </h3>
-          <ul className="space-y-2 text-xs">
             <li><NavLink to="/feedback" className="hover:text-saffron transition-colors">Citizen Feedback</NavLink></li>
-            <li><NavLink to="/admin" className="hover:text-saffron font-bold text-saffron/90 transition-colors">Admin Suite</NavLink></li>
-            <li><NavLink to="/admin/upload" className="hover:text-saffron transition-colors">Document Ingestion Pipeline</NavLink></li>
-            <li><NavLink to="/admin/agent-activity" className="hover:text-saffron transition-colors">Agent Activity Log</NavLink></li>
           </ul>
         </div>
       </div>
