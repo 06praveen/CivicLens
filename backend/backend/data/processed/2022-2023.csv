@@ -1,0 +1,383 @@
+page,pdf_page,statement,ministry_department,expenditure_category,category_number,actuals_2020_2021_revenue,actuals_2020_2021_capital,actuals_2020_2021_total,BE_2021_2022_revenue,BE_2021_2022_capital,BE_2021_2022_total,RE_2021_2022_revenue,RE_2021_2022_capital,RE_2021_2022_total,BE_2022_2023_revenue,BE_2022_2023_capital,BE_2022_2023_total
+6,10,Statement 3,Department of Agriculture and Farmers Welfare,Total Ministry/Department,,108251.03,21.8,108272.83,122961.57,56.0,123017.57,118257.69,36.55,118294.24,123960.75,39.25,124000.0
+6,10,Statement 3,Department of Agriculture and Farmers Welfare,Central Sector Schemes/Projects,1,95779.92,,95779.92,105018.81,,105018.81,106428.8,,106428.8,105710.0,,105710.0
+6,10,Statement 3,Department of Agriculture and Farmers Welfare,Centrally Sponsored Schemes,2,11938.72,21.8,11960.52,17352.19,56.0,17408.19,10852.65,36.55,10889.2,17616.0,,17616.0
+6,10,Statement 3,Department of Agriculture and Farmers Welfare,Establishment Expenditure of the Centre,3,503.46,,503.46,557.47,,557.47,927.7,,927.7,594.25,39.25,633.5
+6,10,Statement 3,Department of Agriculture and Farmers Welfare,Other Central Sector Expenditure,4,28.93,,28.93,33.1,,33.1,48.54,,48.54,40.5,,40.5
+6,10,Statement 3,Department of Agricultural Research and Education,Total Ministry/Department,,7553.77,,7553.77,8513.62,,8513.62,8513.62,,8513.62,8513.62,,8513.62
+6,10,Statement 3,Department of Agricultural Research and Education,Central Sector Schemes/Projects,1,2246.99,,2246.99,2686.0,,2686.0,2347.0,,2347.0,1995.83,,1995.83
+6,10,Statement 3,Department of Agricultural Research and Education,Establishment Expenditure of the Centre,2,12.58,,12.58,14.05,,14.05,14.09,,14.09,39.68,,39.68
+6,10,Statement 3,Department of Agricultural Research and Education,Other Central Sector Expenditure,3,5294.2,,5294.2,5813.57,,5813.57,6152.53,,6152.53,6478.11,,6478.11
+6,10,Statement 3,Atomic Energy,Total Ministry/Department,,8698.84,6497.4,15196.24,8389.12,9875.77,18264.89,8121.16,14586.05,22707.21,8440.34,14283.24,22723.58
+6,10,Statement 3,Atomic Energy,Central Sector Schemes/Projects,1,161.43,3641.52,3802.95,452.47,6224.37,6676.84,366.18,5518.01,5884.19,616.6,6819.22,7435.82
+6,10,Statement 3,Atomic Energy,Establishment Expenditure of the Centre,2,5896.85,135.88,6032.73,4890.35,-28.6,4861.75,5127.57,169.29,5296.86,4810.64,-109.1,4701.54
+6,10,Statement 3,Atomic Energy,Other Central Sector Expenditure,3,2640.56,2720.0,5360.56,3046.3,3680.0,6726.3,2627.41,8898.75,11526.16,3013.1,7573.12,10586.22
+6,10,Statement 3,Ministry of Ayush,Total Ministry/Department,,2126.46,,2126.46,2970.3,,2970.3,2664.42,,2664.42,3050.0,,3050.0
+6,10,Statement 3,Ministry of Ayush,Central Sector Schemes/Projects,1,117.96,,117.96,298.67,,298.67,235.14,,235.14,306.98,,306.98
+6,10,Statement 3,Ministry of Ayush,Centrally Sponsored Schemes,2,397.72,,397.72,553.8,,553.8,500.0,,500.0,800.0,,800.0
+6,10,Statement 3,Ministry of Ayush,Establishment Expenditure of the Centre,3,92.62,,92.62,118.75,,118.75,85.26,,85.26,72.92,,72.92
+6,10,Statement 3,Ministry of Ayush,Other Central Sector Expenditure,4,1518.16,,1518.16,1999.08,,1999.08,1844.02,,1844.02,1870.1,,1870.1
+6,10,Statement 3,Department of Chemicals and Petrochemicals,Total Ministry/Department,,219.13,73.7,292.83,229.64,3.5,233.14,206.83,2.17,209.0,207.67,1.33,209.0
+6,10,Statement 3,Department of Chemicals and Petrochemicals,Central Sector Schemes/Projects,1,25.65,,25.65,56.73,,56.73,54.73,,54.73,51.5,,51.5
+6,10,Statement 3,Department of Chemicals and Petrochemicals,Establishment Expenditure of the Centre,2,17.94,,17.94,20.97,,20.97,19.73,,19.73,21.35,,21.35
+6,10,Statement 3,Department of Chemicals and Petrochemicals,Other Central Sector Expenditure,3,175.54,,175.54,151.94,,151.94,132.37,,132.37,134.82,,134.82
+6,10,Statement 3,Department of Chemicals and Petrochemicals,Other Grants/Loans/Transfers,4,,73.7,73.7,,3.5,3.5,,2.17,2.17,,1.33,1.33
+6,10,Statement 3,Department of Fertilisers,Total Ministry/Department,,127947.91,813.24,128761.15,79566.77,444.62,80011.39,140258.7,444.58,140703.28,105262.18,0.05,105262.23
+6,10,Statement 3,Department of Fertilisers,Central Sector Schemes/Projects,1,127921.74,,127921.74,79529.68,,79529.68,140122.32,,140122.32,105222.32,,105222.32
+6,10,Statement 3,Department of Fertilisers,Establishment Expenditure of the Centre,2,31.64,,31.64,37.08,,37.08,36.28,,36.28,39.75,,39.75
+6,10,Statement 3,Department of Fertilisers,Other Central Sector Expenditure,3,-5.47,813.24,807.77,0.01,444.62,444.63,100.1,444.58,544.68,0.11,0.05,0.16
+6,10,Statement 3,Department of Pharmaceuticals,Total Ministry/Department,,448.86,7.15,456.01,461.29,9.12,470.41,674.99,148.12,823.11,2238.85,5.3,2244.15
+6,10,Statement 3,Department of Pharmaceuticals,Central Sector Schemes/Projects,1,394.32,,394.32,410.76,,410.76,623.0,,623.0,2157.5,,2157.5
+7,11,Statement 3,Department of Pharmaceuticals,Establishment Expenditure of the Centre,2,27.14,,27.14,31.53,,31.53,29.99,,29.99,36.35,,36.35
+7,11,Statement 3,Department of Pharmaceuticals,Other Central Sector Expenditure,3,27.55,7.15,34.7,19.0,9.12,28.12,22.0,148.12,170.12,45.0,5.3,50.3
+7,11,Statement 3,Department of Pharmaceuticals,Other Grants/Loans/Transfers,4,-0.15,,-0.15,,,,,,,,,
+7,11,Statement 3,Ministry of Civil Aviation,Total Ministry/Department,,4038.67,49.9,4088.57,3184.15,40.52,3224.67,6033.39,66618.61,72652.0,10590.54,76.46,10667.0
+7,11,Statement 3,Ministry of Civil Aviation,Central Sector Schemes/Projects,1,3693.58,,3693.58,2869.0,,2869.0,3391.31,,3391.31,9899.95,,9899.95
+7,11,Statement 3,Ministry of Civil Aviation,Establishment Expenditure of the Centre,2,279.48,49.9,329.38,284.64,40.51,325.15,476.75,61.6,538.35,512.57,76.45,589.02
+7,11,Statement 3,Ministry of Civil Aviation,Other Central Sector Expenditure,3,65.61,,65.61,30.51,0.01,30.52,2165.33,66557.01,68722.34,178.02,0.01,178.03
+7,11,Statement 3,Ministry of Coal,Total Ministry/Department,,571.64,,571.64,534.88,,534.88,644.09,,644.09,393.24,,393.24
+7,11,Statement 3,Ministry of Coal,Central Sector Schemes/Projects,1,504.35,,504.35,419.98,,419.98,552.03,,552.03,314.54,,314.54
+7,11,Statement 3,Ministry of Coal,Establishment Expenditure of the Centre,2,44.94,,44.94,61.7,,61.7,62.45,,62.45,65.74,,65.74
+7,11,Statement 3,Ministry of Coal,Other Central Sector Expenditure,3,22.35,,22.35,53.2,,53.2,29.61,,29.61,12.96,,12.96
+7,11,Statement 3,Department of Commerce,Total Ministry/Department,,2735.03,420.94,3155.97,4699.01,287.0,4986.01,6554.0,867.0,7421.0,5673.0,400.0,6073.0
+7,11,Statement 3,Department of Commerce,Central Sector Schemes/Projects,1,3356.97,390.0,3746.97,3887.02,260.0,4147.02,5806.93,840.0,6646.93,4809.4,400.0,5209.4
+7,11,Statement 3,Department of Commerce,Establishment Expenditure of the Centre,2,734.45,37.0,771.45,741.65,27.0,768.65,728.93,27.0,755.93,805.87,,805.87
+7,11,Statement 3,Department of Commerce,Other Central Sector Expenditure,3,-1356.39,-6.06,-1362.45,70.34,,70.34,18.14,,18.14,57.73,,57.73
+7,11,Statement 3,Department for Promotion of Industry and Internal Trade,Total Ministry/Department,,6731.19,797.35,7528.54,6570.66,1211.58,7782.24,6696.42,1685.58,8382.0,7048.0,1300.0,8348.0
+7,11,Statement 3,Department for Promotion of Industry and Internal Trade,Central Sector Schemes/Projects,1,6256.94,777.4,7034.34,5960.44,1201.58,7162.02,6092.22,1675.58,7767.8,6406.89,1283.5,7690.39
+7,11,Statement 3,Department for Promotion of Industry and Internal Trade,Establishment Expenditure of the Centre,2,374.33,19.95,394.28,415.82,10.0,425.82,423.98,10.0,433.98,435.5,16.5,452.0
+7,11,Statement 3,Department for Promotion of Industry and Internal Trade,Other Central Sector Expenditure,3,99.92,,99.92,194.4,,194.4,180.22,,180.22,205.61,,205.61
+7,11,Statement 3,Department of Posts,Total Ministry/Department,,17695.3,897.42,18592.72,15618.13,910.09,16528.22,18034.54,932.33,18966.87,19931.4,888.62,20820.02
+7,11,Statement 3,Department of Posts,Central Sector Schemes/Projects,1,379.95,886.26,1266.21,358.88,895.09,1253.97,322.64,914.33,1236.97,384.88,870.62,1255.5
+7,11,Statement 3,Department of Posts,Establishment Expenditure of the Centre,2,17315.35,11.16,17326.51,15259.25,15.0,15274.25,17711.9,18.0,17729.9,19546.52,18.0,19564.52
+7,11,Statement 3,Department of Telecommunications,Total Ministry/Department,,37954.09,4356.11,42310.2,32803.44,25933.56,58737.0,30080.04,5470.17,35550.21,30436.38,54150.42,84586.8
+7,11,Statement 3,Department of Telecommunications,Central Sector Schemes/Projects,1,7258.66,4138.11,11396.77,9098.02,5333.56,14431.58,8371.75,5245.17,13616.92,2611.18,9066.82,11678.0
+7,11,Statement 3,Department of Telecommunications,Establishment Expenditure of the Centre,2,15702.69,113.0,15815.69,16262.5,110.0,16372.5,17364.72,145.0,17509.72,20042.92,163.6,20206.52
+7,11,Statement 3,Department of Telecommunications,Other Central Sector Expenditure,3,14992.74,105.0,15097.74,7442.92,20490.0,27932.92,4343.57,80.0,4423.57,7782.28,44920.0,52702.28
+7,11,Statement 3,Department of Consumer Affairs,Total Ministry/Department,,11332.1,33.37,11365.47,2928.05,46.05,2974.1,2434.23,19.41,2453.64,1705.03,19.85,1724.88
+7,11,Statement 3,Department of Consumer Affairs,Central Sector Schemes/Projects,1,11239.36,33.37,11272.73,2824.45,46.05,2870.5,2328.84,19.41,2348.25,1579.15,19.85,1599.0
+7,11,Statement 3,Department of Consumer Affairs,Establishment Expenditure of the Centre,2,92.74,,92.74,103.6,,103.6,105.39,,105.39,125.88,,125.88
+7,11,Statement 3,Department of Food and Public Distribution,Total Ministry/Department,,554243.35,1188.35,555431.7,251248.34,2725.96,253974.3,299363.35,2636.65,302000.0,213929.91,2029.67,215959.58
+7,11,Statement 3,Department of Food and Public Distribution,Central Sector Schemes/Projects,1,554134.72,184.53,554319.25,251045.96,220.21,251266.17,299223.5,131.1,299354.6,207192.29,98.81,207291.1
+8,12,Statement 3,Department of Food and Public Distribution,Centrally Sponsored Schemes,2,2.35,,2.35,70.0,,70.0,9.05,,9.05,6582.13,,6582.13
+8,12,Statement 3,Department of Food and Public Distribution,Establishment Expenditure of the Centre,3,97.03,3.82,100.85,117.55,5.75,123.3,114.24,5.55,119.79,133.07,30.86,163.93
+8,12,Statement 3,Department of Food and Public Distribution,Other Central Sector Expenditure,4,9.25,1000.0,1009.25,14.83,2500.0,2514.83,16.56,2500.0,2516.56,22.42,1900.0,1922.42
+8,12,Statement 3,Ministry of Cooperation,Total Ministry/Department,,,,,,,,,,,889.0,11.0,900.0
+8,12,Statement 3,Ministry of Cooperation,Central Sector Schemes/Projects,1,,,,,,,,,,106.0,,106.0
+8,12,Statement 3,Ministry of Cooperation,Centrally Sponsored Schemes,2,,,,,,,,,,624.0,,624.0
+8,12,Statement 3,Ministry of Cooperation,Establishment Expenditure of the Centre,3,,,,,,,,,,109.0,11.0,120.0
+8,12,Statement 3,Ministry of Cooperation,Other Central Sector Expenditure,4,,,,,,,,,,50.0,,50.0
+8,12,Statement 3,Ministry of Corporate Affairs,Total Ministry/Department,,619.21,33.37,652.58,661.13,51.0,712.13,619.45,40.3,659.75,692.52,40.5,733.02
+8,12,Statement 3,Ministry of Corporate Affairs,Central Sector Schemes/Projects,1,4.53,0.06,4.59,10.5,1.0,11.5,5.16,0.3,5.46,5.68,0.5,6.18
+8,12,Statement 3,Ministry of Corporate Affairs,Establishment Expenditure of the Centre,2,539.3,,539.3,565.63,,565.63,540.29,,540.29,582.82,,582.82
+8,12,Statement 3,Ministry of Corporate Affairs,Other Central Sector Expenditure,3,75.38,33.31,108.69,85.0,50.0,135.0,74.0,40.0,114.0,104.02,40.0,144.02
+8,12,Statement 3,Ministry of Culture,Total Ministry/Department,,2114.97,20.21,2135.18,2609.23,78.76,2687.99,2609.23,55.77,2665.0,2920.89,88.16,3009.05
+8,12,Statement 3,Ministry of Culture,Central Sector Schemes/Projects,1,344.67,,344.67,454.2,1.0,455.2,486.33,1.0,487.33,531.55,1.0,532.55
+8,12,Statement 3,Ministry of Culture,Establishment Expenditure of the Centre,2,1072.28,20.21,1092.49,1271.9,77.76,1349.66,1221.69,54.77,1276.46,1366.01,87.16,1453.17
+8,12,Statement 3,Ministry of Culture,Other Central Sector Expenditure,3,698.02,,698.02,883.13,,883.13,901.21,,901.21,1023.33,,1023.33
+8,12,Statement 3,Ministry of Defence (Civil),Total Ministry/Department,,11901.27,5619.99,17521.26,10083.93,5173.41,15257.34,10659.37,6928.04,17587.41,12050.01,8049.99,20100.0
+8,12,Statement 3,Ministry of Defence (Civil),Central Sector Schemes/Projects,1,1003.82,3104.28,4108.1,850.0,2500.0,3350.0,895.0,3500.0,4395.0,1055.0,3500.0,4555.0
+8,12,Statement 3,Ministry of Defence (Civil),Establishment Expenditure of the Centre,2,9118.29,2503.21,11621.5,9281.93,2650.0,11931.93,10207.99,3236.46,13444.45,11135.07,4246.37,15381.44
+8,12,Statement 3,Ministry of Defence (Civil),Other Central Sector Expenditure,3,1779.16,12.5,1791.66,-48.0,23.41,-24.59,-443.62,191.58,-252.04,-140.06,303.62,163.56
+8,12,Statement 3,Defence Services (Revenue),Total Ministry/Department,,205788.59,,205788.59,212027.56,,212027.56,229567.23,,229567.23,233000.54,,233000.54
+8,12,Statement 3,Defence Services (Revenue),Establishment Expenditure of the Centre,1,205788.59,,205788.59,212027.56,,212027.56,229567.23,,229567.23,233000.54,,233000.54
+8,12,Statement 3,Capital Outlay on Defence Services,Total Ministry/Department,,,134304.92,134304.92,,135060.72,135060.72,,138850.9,138850.9,,152369.61,152369.61
+8,12,Statement 3,Capital Outlay on Defence Services,Central Sector Schemes/Projects,1,,134304.92,134304.92,,135060.72,135060.72,,138850.9,138850.9,,152369.61,152369.61
+8,12,Statement 3,Defence Pensions,Total Ministry/Department,,128065.77,,128065.77,115850.0,,115850.0,116878.0,,116878.0,119696.0,,119696.0
+8,12,Statement 3,Defence Pensions,Establishment Expenditure of the Centre,1,128065.77,,128065.77,115850.0,,115850.0,116878.0,,116878.0,119696.0,,119696.0
+8,12,Statement 3,Ministry of Development of North Eastern Region,Total Ministry/Department,,1531.31,322.35,1853.66,2031.51,626.49,2658.0,2021.51,636.49,2658.0,2140.04,659.96,2800.0
+8,12,Statement 3,Ministry of Development of North Eastern Region,Central Sector Schemes/Projects,1,1516.39,318.35,1834.74,2015.0,622.49,2637.49,1992.34,632.49,2624.83,2115.96,655.96,2771.92
+8,12,Statement 3,Ministry of Development of North Eastern Region,Establishment Expenditure of the Centre,2,14.92,,14.92,16.51,,16.51,17.84,,17.84,18.41,,18.41
+8,12,Statement 3,Ministry of Development of North Eastern Region,Other Central Sector Expenditure,3,,4.0,4.0,,4.0,4.0,11.33,4.0,15.33,5.67,4.0,9.67
+8,12,Statement 3,Ministry of Earth Sciences,Total Ministry/Department,,1204.9,69.64,1274.54,1734.13,163.0,1897.13,2145.54,224.0,2369.54,2203.51,450.0,2653.51
+9,13,Statement 3,Ministry of Earth Sciences,Central Sector Schemes/Projects,1,564.49,69.7,634.19,1018.17,163.0,1181.17,897.17,224.0,1121.17,1425.24,450.0,1875.24
+9,13,Statement 3,Ministry of Earth Sciences,Establishment Expenditure of the Centre,2,467.26,,467.26,517.96,,517.96,1064.96,,1064.96,579.2,,579.2
+9,13,Statement 3,Ministry of Earth Sciences,Other Central Sector Expenditure,3,173.15,-0.06,173.09,198.0,,198.0,183.41,,183.41,199.07,,199.07
+9,13,Statement 3,Department of School Education and Literacy,Total Ministry/Department,,51841.64,,51841.64,54873.66,,54873.66,51969.95,,51969.95,63449.37,,63449.37
+9,13,Statement 3,Department of School Education and Literacy,Central Sector Schemes/Projects,1,321.96,,321.96,363.5,,363.5,286.2,,286.2,358.26,,358.26
+9,13,Statement 3,Department of School Education and Literacy,Centrally Sponsored Schemes,2,41107.42,,41107.42,43285.16,,43285.16,40576.5,,40576.5,50694.11,,50694.11
+9,13,Statement 3,Department of School Education and Literacy,Establishment Expenditure of the Centre,3,28.28,,28.28,33.0,,33.0,34.3,,34.3,38.0,,38.0
+9,13,Statement 3,Department of School Education and Literacy,Other Central Sector Expenditure,4,10387.96,,10387.96,11192.0,,11192.0,11072.95,,11072.95,12359.0,,12359.0
+9,13,Statement 3,Department of School Education and Literacy,Other Grants/Loans/Transfers,5,-3.98,,-3.98,,,,,,,,,
+9,13,Statement 3,Department of Higher Education,Total Ministry/Department,,32172.02,205.74,32377.76,38325.15,25.5,38350.65,36016.86,14.71,36031.57,40810.34,18.01,40828.35
+9,13,Statement 3,Department of Higher Education,Central Sector Schemes/Projects,1,4308.95,200.0,4508.95,6068.43,1.0,6069.43,4411.43,0.01,4411.44,5412.0,0.01,5412.01
+9,13,Statement 3,Department of Higher Education,Centrally Sponsored Schemes,2,159.27,,159.27,3000.0,,3000.0,793.26,,793.26,2042.95,,2042.95
+9,13,Statement 3,Department of Higher Education,Establishment Expenditure of the Centre,3,155.43,5.74,161.17,222.94,24.5,247.44,215.88,14.7,230.58,255.38,18.0,273.38
+9,13,Statement 3,Department of Higher Education,Other Central Sector Expenditure,4,26926.36,,26926.36,29023.78,,29023.78,30589.99,,30589.99,33100.0,,33100.0
+9,13,Statement 3,Department of Higher Education,Other Grants/Loans/Transfers,5,622.01,,622.01,10.0,,10.0,6.3,,6.3,0.01,,0.01
+9,13,Statement 3,Ministry of Electronics and Information Technology,Total Ministry/Department,,5045.67,350.63,5396.3,9274.66,446.0,9720.66,9174.25,407.0,9581.25,13911.99,388.01,14300.0
+9,13,Statement 3,Ministry of Electronics and Information Technology,Central Sector Schemes/Projects,1,2970.54,60.0,3030.54,6776.33,30.0,6806.33,6388.0,,6388.0,10676.17,0.01,10676.18
+9,13,Statement 3,Ministry of Electronics and Information Technology,Establishment Expenditure of the Centre,2,1308.03,290.63,1598.66,1438.33,416.0,1854.33,1433.28,407.0,1840.28,1515.82,388.0,1903.82
+9,13,Statement 3,Ministry of Electronics and Information Technology,Other Central Sector Expenditure,3,767.1,,767.1,1060.0,,1060.0,1352.97,,1352.97,1720.0,,1720.0
+9,13,Statement 3,"Ministry of Environment, Forests and Climate Change",Total Ministry/Department,,1933.83,33.09,1966.92,2747.45,122.48,2869.93,2471.49,48.51,2520.0,2915.0,115.0,3030.0
+9,13,Statement 3,"Ministry of Environment, Forests and Climate Change",Central Sector Schemes/Projects,1,553.79,,553.79,993.13,,993.13,800.0,,800.0,963.07,,963.07
+9,13,Statement 3,"Ministry of Environment, Forests and Climate Change",Centrally Sponsored Schemes,2,552.4,,552.4,766.0,,766.0,670.0,,670.0,930.19,,930.19
+9,13,Statement 3,"Ministry of Environment, Forests and Climate Change",Establishment Expenditure of the Centre,3,418.97,33.09,452.06,511.82,122.48,634.3,514.99,48.51,563.5,570.79,115.0,685.79
+9,13,Statement 3,"Ministry of Environment, Forests and Climate Change",Other Central Sector Expenditure,4,408.67,,408.67,476.5,,476.5,486.5,,486.5,450.95,,450.95
+9,13,Statement 3,Ministry of External Affairs,Total Ministry/Department,,13190.18,1139.05,14329.23,16663.98,1490.75,18154.73,14919.41,1080.59,16000.0,15833.77,1416.23,17250.0
+9,13,Statement 3,Ministry of External Affairs,Central Sector Schemes/Projects,1,5053.36,539.15,5592.51,6754.4,880.75,7635.15,5217.84,480.59,5698.43,6043.77,706.23,6750.0
+9,13,Statement 3,Ministry of External Affairs,Establishment Expenditure of the Centre,2,4242.76,603.34,4846.1,5247.69,610.0,5857.69,5030.95,600.0,5630.95,5451.74,710.0,6161.74
+9,13,Statement 3,Ministry of External Affairs,Other Central Sector Expenditure,3,3894.06,-3.44,3890.62,4661.89,,4661.89,4670.62,,4670.62,4338.26,,4338.26
+9,13,Statement 3,Department of Economic Affairs,Total Ministry/Department,,5413.8,7844.73,13258.53,4520.78,56607.4,61128.18,5090.52,10525.58,15616.1,6143.36,8396.9,14540.26
+9,13,Statement 3,Department of Economic Affairs,Central Sector Schemes/Projects,1,2632.83,3567.45,6200.28,2244.01,5010.01,7254.02,1434.67,5010.01,6444.68,1703.0,5100.01,6803.01
+10,14,Statement 3,Department of Economic Affairs,Establishment Expenditure of the Centre,2,155.59,,155.59,196.06,,196.06,215.6,,215.6,248.39,,248.39
+10,14,Statement 3,Department of Economic Affairs,Other Central Sector Expenditure,3,2625.38,4277.28,6902.66,2080.71,51597.39,53678.1,3440.25,5515.57,8955.82,4191.97,3296.89,7488.86
+10,14,Statement 3,Department of Expenditure,Total Ministry/Department,,289.16,,289.16,454.74,,454.74,459.57,,459.57,476.88,0.01,476.89
+10,14,Statement 3,Department of Expenditure,Establishment Expenditure of the Centre,1,277.75,,277.75,432.92,,432.92,441.14,,441.14,458.81,0.01,458.82
+10,14,Statement 3,Department of Expenditure,Other Central Sector Expenditure,2,11.41,,11.41,21.82,,21.82,18.43,,18.43,18.07,,18.07
+10,14,Statement 3,Department of Financial Services,Total Ministry/Department,,10116.5,12650.0,22766.5,3710.77,25800.02,29510.79,3037.87,32034.0,35071.87,1102.7,4211.03,5313.73
+10,14,Statement 3,Department of Financial Services,Central Sector Schemes/Projects,1,9910.16,12650.0,22560.16,3498.9,25800.02,29298.92,2826.91,32034.0,34860.91,869.41,4211.03,5080.44
+10,14,Statement 3,Department of Financial Services,Establishment Expenditure of the Centre,2,206.34,,206.34,211.87,,211.87,210.96,,210.96,233.29,,233.29
+10,14,Statement 3,Department of Public Enterprises,Total Ministry/Department,,16.11,,16.11,21.81,,21.81,27.0,150.0,177.0,30.0,,30.0
+10,14,Statement 3,Department of Public Enterprises,Central Sector Schemes/Projects,1,3.7,,3.7,8.55,,8.55,6.8,,6.8,8.55,,8.55
+10,14,Statement 3,Department of Public Enterprises,Establishment Expenditure of the Centre,2,12.41,,12.41,13.26,,13.26,20.2,150.0,170.2,21.45,,21.45
+10,14,Statement 3,Department of Investment and Public Asset Management,Total Ministry/Department,,71.72,,71.72,110.52,,110.52,96.88,,96.88,290.42,,290.42
+10,14,Statement 3,Department of Investment and Public Asset Management,Establishment Expenditure of the Centre,1,71.72,,71.72,110.52,,110.52,96.88,,96.88,290.42,,290.42
+10,14,Statement 3,Department of Revenue,Total Ministry/Department,,131662.38,0.15,131662.53,101222.36,13.02,101235.38,111893.77,11.67,111905.44,121226.99,4.3,121231.29
+10,14,Statement 3,Department of Revenue,Establishment Expenditure of the Centre,1,614.58,,614.58,804.31,,804.31,821.21,,821.21,826.64,,826.64
+10,14,Statement 3,Department of Revenue,Other Central Sector Expenditure,2,328.8,0.15,328.95,418.02,13.02,431.04,277.09,11.67,288.76,400.32,4.3,404.62
+10,14,Statement 3,Department of Revenue,Other Grants/Loans/Transfers,3,130719.0,,130719.0,100000.03,,100000.03,110795.47,,110795.47,120000.03,,120000.03
+10,14,Statement 3,Direct Taxes,Total Ministry/Department,,7223.29,173.09,7396.38,8180.34,350.0,8530.34,8206.89,300.0,8506.89,8866.8,440.0,9306.8
+10,14,Statement 3,Direct Taxes,Establishment Expenditure of the Centre,1,7223.29,172.1,7395.39,8180.34,350.0,8530.34,8206.89,300.0,8506.89,8866.8,440.0,9306.8
+10,14,Statement 3,Direct Taxes,Other Central Sector Expenditure,2,,0.99,0.99,,,,,,,,,
+10,14,Statement 3,Indirect Taxes,Total Ministry/Department,,7164.02,216.1,7380.12,20882.77,452.0,21334.77,73960.49,978.0,74938.49,39738.67,1400.0,41138.67
+10,14,Statement 3,Indirect Taxes,Establishment Expenditure of the Centre,1,7164.02,216.1,7380.12,20882.77,452.0,21334.77,73960.49,978.0,74938.49,39738.67,1400.0,41138.67
+10,14,Statement 3,Indian Audit and Accounts Department,Total Ministry/Department,,4732.52,7.91,4740.43,5067.19,24.95,5092.14,5049.69,54.95,5104.64,5596.14,24.0,5620.14
+10,14,Statement 3,Indian Audit and Accounts Department,Establishment Expenditure of the Centre,1,4732.52,7.91,4740.43,5067.19,24.95,5092.14,5049.69,54.95,5104.64,5596.14,24.0,5620.14
+10,14,Statement 3,Interest Payments,Total Ministry/Department,,679868.58,,679868.58,809701.32,,809701.32,813791.0,,813791.0,940651.02,,940651.02
+10,14,Statement 3,Interest Payments,Other Central Sector Expenditure,1,679868.58,,679868.58,809701.32,,809701.32,813791.0,,813791.0,940651.02,,940651.02
+10,14,Statement 3,Repayment of Debt,Total Ministry/Department,,,,,,,,,,,,,
+10,14,Statement 3,Repayment of Debt,Other Central Sector Expenditure,1,,,,,,,,,,,,
+10,14,Statement 3,Pensions,Total Ministry/Department,,62724.63,,62724.63,55873.12,,55873.12,63005.12,,63005.12,65840.81,,65840.81
+10,14,Statement 3,Pensions,Establishment Expenditure of the Centre,1,62724.63,,62724.63,55873.12,,55873.12,63005.12,,63005.12,65840.81,,65840.81
+10,14,Statement 3,Transfers to States,Total Ministry/Department,,191922.55,19552.15,211474.7,280133.77,13168.23,293302.0,264578.15,20816.08,285394.23,222440.0,111899.42,334339.42
+11,15,Statement 3,Transfers to States,Finance Commission Grants,1,184062.5,,184062.5,220843.0,,220843.0,211065.0,,211065.0,192108.0,,192108.0
+11,15,Statement 3,Transfers to States,Other Grants/Loans/Transfers,2,7860.05,19552.15,27412.2,59290.77,13168.23,72459.0,53513.15,20816.08,74329.23,30332.0,111899.42,142231.42
+11,15,Statement 3,Department of Fisheries,Total Ministry/Department,,877.94,4.69,882.63,1192.16,28.68,1220.84,1389.54,17.75,1407.29,2093.9,24.57,2118.47
+11,15,Statement 3,Department of Fisheries,Centrally Sponsored Schemes,1,708.58,,708.58,1015.0,,1015.0,1210.0,,1210.0,1891.0,,1891.0
+11,15,Statement 3,Department of Fisheries,Establishment Expenditure of the Centre,2,134.11,4.69,138.8,149.32,28.68,178.0,157.5,17.75,175.25,179.5,24.57,204.07
+11,15,Statement 3,Department of Fisheries,Other Central Sector Expenditure,3,35.25,,35.25,27.84,,27.84,22.04,,22.04,23.4,,23.4
+11,15,Statement 3,Department of Animal Husbandry and Dairying,Total Ministry/Department,,2460.02,3.52,2463.54,3057.59,44.39,3101.98,2700.17,13.58,2713.75,3862.8,56.04,3918.84
+11,15,Statement 3,Department of Animal Husbandry and Dairying,Central Sector Schemes/Projects,1,858.0,,858.0,1753.0,,1753.0,1148.0,,1148.0,2315.0,,2315.0
+11,15,Statement 3,Department of Animal Husbandry and Dairying,Centrally Sponsored Schemes,2,1457.73,,1457.73,1177.04,,1177.04,1394.01,,1394.01,1394.76,,1394.76
+11,15,Statement 3,Department of Animal Husbandry and Dairying,Establishment Expenditure of the Centre,3,135.29,3.52,138.81,158.55,3.39,161.94,158.16,3.58,161.74,170.92,24.92,195.84
+11,15,Statement 3,Department of Animal Husbandry and Dairying,Other Central Sector Expenditure,4,9.0,,9.0,-31.0,41.0,10.0,,10.0,10.0,-17.88,31.12,13.24
+11,15,Statement 3,Ministry of Food Processing Industries,Total Ministry/Department,,1145.52,,1145.52,1308.66,,1308.66,1304.12,,1304.12,2941.99,,2941.99
+11,15,Statement 3,Ministry of Food Processing Industries,Central Sector Schemes/Projects,1,667.05,,667.05,700.0,,700.0,801.0,,801.0,1922.0,,1922.0
+11,15,Statement 3,Ministry of Food Processing Industries,Centrally Sponsored Schemes,2,387.75,,387.75,500.0,,500.0,399.0,,399.0,900.0,,900.0
+11,15,Statement 3,Ministry of Food Processing Industries,Establishment Expenditure of the Centre,3,26.63,,26.63,36.26,,36.26,35.62,,35.62,40.18,,40.18
+11,15,Statement 3,Ministry of Food Processing Industries,Other Central Sector Expenditure,4,64.09,,64.09,72.4,,72.4,68.5,,68.5,79.81,,79.81
+11,15,Statement 3,Department of Health and Family Welfare,Total Ministry/Department,,73982.34,3586.99,77569.33,68760.03,2508.74,71268.77,79107.61,3813.04,82920.65,77367.43,5632.57,83000.0
+11,15,Statement 3,Department of Health and Family Welfare,Central Sector Schemes/Projects,1,18656.38,3162.06,21818.44,8622.65,1943.98,10566.63,10892.07,3331.24,14223.31,10315.63,4847.59,15163.22
+11,15,Statement 3,Department of Health and Family Welfare,Centrally Sponsored Schemes,2,39569.16,,39569.16,42972.5,5.0,42977.5,50586.14,5.0,50591.14,47629.07,5.0,47634.07
+11,15,Statement 3,Department of Health and Family Welfare,Establishment Expenditure of the Centre,3,5132.49,414.83,5547.32,5777.76,468.04,6245.8,5570.67,429.8,6000.47,6209.9,646.83,6856.73
+11,15,Statement 3,Department of Health and Family Welfare,Other Central Sector Expenditure,4,10624.31,10.1,10634.41,11387.12,91.72,11478.84,12058.73,47.0,12105.73,13212.83,133.15,13345.98
+11,15,Statement 3,Department of Health Research,Total Ministry/Department,,3124.59,,3124.59,2663.0,,2663.0,3080.0,,3080.0,3200.65,,3200.65
+11,15,Statement 3,Department of Health Research,Central Sector Schemes/Projects,1,1484.03,,1484.03,260.0,,260.0,907.93,,907.93,954.65,,954.65
+11,15,Statement 3,Department of Health Research,Establishment Expenditure of the Centre,2,28.77,,28.77,45.0,,45.0,39.0,,39.0,48.0,,48.0
+11,15,Statement 3,Department of Health Research,Other Central Sector Expenditure,3,1611.79,,1611.79,2358.0,,2358.0,2133.07,,2133.07,2198.0,,2198.0
+11,15,Statement 3,Ministry of Heavy Industries,Total Ministry/Department,,555.34,311.56,866.9,927.85,67.42,995.27,1053.95,127.05,1181.0,3213.79,92.21,3306.0
+11,15,Statement 3,Ministry of Heavy Industries,Central Sector Schemes/Projects,1,386.13,114.3,500.43,869.75,67.22,936.97,838.05,17.0,855.05,3119.53,23.62,3143.15
+11,15,Statement 3,Ministry of Heavy Industries,Establishment Expenditure of the Centre,2,32.39,,32.39,41.09,,41.09,30.68,,30.68,32.93,,32.93
+11,15,Statement 3,Ministry of Heavy Industries,Other Central Sector Expenditure,3,136.82,197.26,334.08,17.01,0.2,17.21,185.22,110.05,295.27,61.33,68.59,129.92
+11,15,Statement 3,Ministry of Home Affairs,Total Ministry/Department,,3580.44,275.28,3855.72,7333.41,286.99,7620.4,4237.96,320.65,4558.61,7384.62,236.38,7621.0
+12,16,Statement 3,Ministry of Home Affairs,Central Sector Schemes/Projects,1,1245.67,105.55,1351.22,1569.07,72.05,1641.12,1691.41,128.0,1819.41,1535.64,86.04,1621.68
+12,16,Statement 3,Ministry of Home Affairs,Establishment Expenditure of the Centre,2,1507.63,92.29,1599.92,1875.31,134.94,2010.25,1879.67,137.65,2017.32,2017.31,107.34,2124.65
+12,16,Statement 3,Ministry of Home Affairs,Other Central Sector Expenditure,3,716.81,77.44,794.25,3841.0,80.0,3921.0,615.37,55.0,670.37,3802.65,43.0,3845.65
+12,16,Statement 3,Ministry of Home Affairs,Other Grants/Loans/Transfers,4,110.33,,110.33,48.03,,48.03,51.51,,51.51,29.02,,29.02
+12,16,Statement 3,Cabinet,Total Ministry/Department,,1186.08,,1186.08,1961.04,137.0,2098.04,1588.0,137.0,1725.0,1202.22,508.82,1711.04
+12,16,Statement 3,Cabinet,Establishment Expenditure of the Centre,1,1186.08,,1186.08,1961.04,137.0,2098.04,1588.0,137.0,1725.0,1202.22,508.82,1711.04
+12,16,Statement 3,Police,Total Ministry/Department,,86675.81,4934.84,91610.65,94086.59,9715.93,103802.52,101369.11,7897.19,109266.3,107187.99,10500.0,117687.99
+12,16,Statement 3,Police,Central Sector Schemes/Projects,1,498.07,3292.11,3790.18,491.86,5642.7,6134.56,725.54,5561.24,6286.78,2209.04,6767.55,8976.59
+12,16,Statement 3,Police,Centrally Sponsored Schemes,2,2120.83,,2120.83,3368.82,,3368.82,3567.5,,3567.5,3319.88,,3319.88
+12,16,Statement 3,Police,Establishment Expenditure of the Centre,3,84321.65,1223.16,85544.81,88796.18,2092.23,90888.41,95412.27,1634.95,97047.22,100283.25,2403.25,102686.5
+12,16,Statement 3,Police,Other Central Sector Expenditure,4,1017.34,542.79,1560.13,1429.73,1981.0,3410.73,1663.8,701.0,2364.8,1375.82,1329.2,2705.02
+12,16,Statement 3,Police,Other Grants/Loans/Transfers,5,-1282.08,-123.22,-1405.3,,,,,,,,,
+12,16,Statement 3,Andaman and Nicobar Islands,Total Ministry/Department,,4482.15,342.44,4824.59,4651.24,666.17,5317.41,5411.55,512.09,5923.64,5116.43,587.22,5703.65
+12,16,Statement 3,Andaman and Nicobar Islands,Establishment Expenditure of the Centre,1,2217.09,,2217.09,2349.55,,2349.55,2398.87,1.79,2400.66,2502.2,,2502.2
+12,16,Statement 3,Andaman and Nicobar Islands,Other Central Sector Expenditure,2,2265.06,342.44,2607.5,2301.69,666.17,2967.86,3012.68,510.3,3522.98,2614.23,587.22,3201.45
+12,16,Statement 3,Chandigarh,Total Ministry/Department,,3882.38,341.28,4223.66,4162.67,498.45,4661.12,4049.18,379.07,4428.25,4427.46,419.33,4846.79
+12,16,Statement 3,Chandigarh,Establishment Expenditure of the Centre,1,2196.6,,2196.6,2411.03,,2411.03,2382.79,,2382.79,2582.37,,2582.37
+12,16,Statement 3,Chandigarh,Other Central Sector Expenditure,2,1685.78,341.28,2027.06,1751.64,498.45,2250.09,1666.39,379.07,2045.46,1845.09,419.33,2264.42
+12,16,Statement 3,Dadra and Nagar Haveli and Daman and Diu,Total Ministry/Department,,1005.14,373.41,1378.55,1439.76,764.83,2204.59,1439.76,873.04,2312.8,1499.0,875.1,2374.1
+12,16,Statement 3,Dadra and Nagar Haveli and Daman and Diu,Establishment Expenditure of the Centre,1,545.52,,545.52,624.71,,624.71,638.06,,638.06,672.38,,672.38
+12,16,Statement 3,Dadra and Nagar Haveli and Daman and Diu,Other Central Sector Expenditure,2,459.62,373.41,833.03,815.05,764.83,1579.88,801.7,873.04,1674.74,826.62,875.1,1701.72
+12,16,Statement 3,Ladakh,Total Ministry/Department,,1585.16,788.58,2373.74,2331.64,3626.36,5958.0,2331.64,3626.36,5958.0,2553.29,3404.71,5958.0
+12,16,Statement 3,Ladakh,Establishment Expenditure of the Centre,1,1327.94,,1327.94,1736.08,,1736.08,1791.61,,1791.61,1946.34,,1946.34
+12,16,Statement 3,Ladakh,Other Central Sector Expenditure,2,257.22,788.58,1045.8,595.56,3626.36,4221.92,540.03,3626.36,4166.39,606.95,3404.71,4011.66
+12,16,Statement 3,Lakshadweep,Total Ministry/Department,,1129.91,102.25,1232.16,1211.71,228.85,1440.56,1206.46,89.8,1296.26,1173.1,221.65,1394.75
+12,16,Statement 3,Lakshadweep,Establishment Expenditure of the Centre,1,384.79,,384.79,404.6,,404.6,415.5,,415.5,444.6,,444.6
+12,16,Statement 3,Lakshadweep,Other Central Sector Expenditure,2,745.12,102.25,847.37,807.11,228.85,1035.96,790.96,89.8,880.76,728.5,221.65,950.15
+12,16,Statement 3,Transfers to Delhi,Total Ministry/Department,,1112.49,,1112.49,957.5,0.01,957.51,1030.01,,1030.01,1168.0,,1168.0
+12,16,Statement 3,Transfers to Delhi,Other Grants/Loans/Transfers,1,1112.49,,1112.49,957.5,0.01,957.51,1030.01,,1030.01,1168.0,,1168.0
+12,16,Statement 3,Transfers to Jammu and Kashmir,Total Ministry/Department,,30757.0,,30757.0,30757.0,,30757.0,34704.46,,34704.46,35581.44,,35581.44
+12,16,Statement 3,Transfers to Jammu and Kashmir,Other Grants/Loans/Transfers,1,30757.0,,30757.0,30757.0,,30757.0,34704.46,,34704.46,35581.44,,35581.44
+13,17,Statement 3,Transfers to Puducherry,Total Ministry/Department,,1703.0,,1703.0,1729.78,0.01,1729.79,1879.78,0.01,1879.79,1729.78,0.01,1729.79
+13,17,Statement 3,Transfers to Puducherry,Other Grants/Loans/Transfers,1,1703.0,,1703.0,1729.78,0.01,1729.79,1879.78,0.01,1879.79,1729.78,0.01,1729.79
+13,17,Statement 3,Ministry of Housing and Urban Affairs,Total Ministry/Department,,36397.28,10303.68,46700.96,28821.99,25759.01,54581.0,47893.76,25956.5,73850.26,49208.45,27341.01,76549.46
+13,17,Statement 3,Ministry of Housing and Urban Affairs,Central Sector Schemes/Projects,1,2427.44,10163.68,12591.12,540.01,25634.01,26174.02,605.01,25851.5,26456.51,275.01,27226.01,27501.02
+13,17,Statement 3,Ministry of Housing and Urban Affairs,Centrally Sponsored Schemes,2,32554.26,,32554.26,24845.0,,24845.0,43695.0,,43695.0,45300.0,,45300.0
+13,17,Statement 3,Ministry of Housing and Urban Affairs,Establishment Expenditure of the Centre,3,1349.3,,1349.3,3370.47,,3370.47,3555.57,,3555.57,3570.03,,3570.03
+13,17,Statement 3,Ministry of Housing and Urban Affairs,Other Central Sector Expenditure,4,66.28,140.0,206.28,66.51,125.0,191.51,38.18,105.0,143.18,63.41,115.0,178.41
+13,17,Statement 3,Ministry of Information and Broadcasting,Total Ministry/Department,,3370.3,6.32,3376.62,4058.61,12.62,4071.23,3743.59,21.1,3764.69,3955.12,25.65,3980.77
+13,17,Statement 3,Ministry of Information and Broadcasting,Central Sector Schemes/Projects,1,327.02,6.32,333.34,619.43,12.62,632.05,428.9,21.1,450.0,604.35,25.65,630.0
+13,17,Statement 3,Ministry of Information and Broadcasting,Establishment Expenditure of the Centre,2,429.07,,429.07,563.77,,563.77,530.47,,530.47,582.87,,582.87
+13,17,Statement 3,Ministry of Information and Broadcasting,Other Central Sector Expenditure,3,2614.21,,2614.21,2875.41,,2875.41,2784.22,,2784.22,2767.9,,2767.9
+13,17,Statement 3,"Department of Water Resources, River Development and",Total Ministry/Department,,7079.46,152.63,7232.09,8700.8,321.77,9022.57,17806.07,202.63,18008.7,18548.05,419.83,18967.88
+13,17,Statement 3,"Department of Water Resources, River Development and",Central Sector Schemes/Projects,1,1822.96,144.43,1967.39,2138.26,317.76,2456.02,2755.14,185.66,2940.8,4826.88,393.98,5220.86
+13,17,Statement 3,"Department of Water Resources, River Development and",Centrally Sponsored Schemes,2,4475.95,0.84,4476.79,5685.67,2.82,5688.49,14020.48,1.76,14022.24,12602.83,2.29,12605.12
+13,17,Statement 3,"Department of Water Resources, River Development and",Establishment Expenditure of the Centre,3,780.55,7.36,787.91,876.87,1.19,878.06,1030.45,15.21,1045.66,1118.34,23.56,1141.9
+13,17,Statement 3,Department of Drinking Water and Sanitation,Total Ministry/Department,,15967.3,,15967.3,60030.45,,60030.45,51036.9,,51036.9,67221.12,,67221.12
+13,17,Statement 3,Department of Drinking Water and Sanitation,Centrally Sponsored Schemes,1,15943.16,,15943.16,60005.1,,60005.1,51011.0,,51011.0,67192.0,,67192.0
+13,17,Statement 3,Department of Drinking Water and Sanitation,Establishment Expenditure of the Centre,2,24.14,,24.14,25.35,,25.35,25.9,,25.9,29.12,,29.12
+13,17,Statement 3,Ministry of Labour and Employment,Total Ministry/Department,,12894.27,26.1,12920.37,13269.37,37.13,13306.5,14224.52,24.2,14248.72,16846.37,47.31,16893.68
+13,17,Statement 3,Ministry of Labour and Employment,Central Sector Schemes/Projects,1,11011.47,0.31,11011.78,11673.6,0.5,11674.1,13283.6,0.5,13284.1,16084.1,,16084.1
+13,17,Statement 3,Ministry of Labour and Employment,Centrally Sponsored Schemes,2,1309.61,0.06,1309.67,976.8,0.1,976.9,299.8,0.1,299.9,74.9,0.1,75.0
+13,17,Statement 3,Ministry of Labour and Employment,Establishment Expenditure of the Centre,3,485.87,25.73,511.6,513.97,36.53,550.5,519.57,23.6,543.17,571.97,47.21,619.18
+13,17,Statement 3,Ministry of Labour and Employment,Other Central Sector Expenditure,4,87.32,,87.32,105.0,,105.0,121.55,,121.55,115.4,,115.4
+13,17,Statement 3,Law and Justice,Total Ministry/Department,,1271.3,286.0,1557.3,1545.82,1100.0,2645.82,3089.0,1122.0,4211.0,1778.48,1615.0,3393.48
+13,17,Statement 3,Law and Justice,Central Sector Schemes/Projects,1,213.22,,213.22,138.82,,138.82,138.82,,138.82,41.0,,41.0
+13,17,Statement 3,Law and Justice,Centrally Sponsored Schemes,2,599.0,,599.0,784.0,,784.0,778.44,,778.44,858.0,,858.0
+13,17,Statement 3,Law and Justice,Establishment Expenditure of the Centre,3,278.24,,278.24,337.2,100.0,437.2,344.13,122.0,466.13,365.98,115.0,480.98
+13,17,Statement 3,Law and Justice,Other Central Sector Expenditure,4,110.0,,110.0,116.5,,116.5,191.75,,191.75,196.5,,196.5
+13,17,Statement 3,Law and Justice,Other Grants/Loans/Transfers,5,70.84,286.0,356.84,169.3,1000.0,1169.3,1635.86,1000.0,2635.86,317.0,1500.0,1817.0
+13,17,Statement 3,Election Commission,Total Ministry/Department,,188.98,4.51,193.49,242.16,7.0,249.16,252.0,7.0,259.0,253.0,7.0,260.0
+14,18,Statement 3,Election Commission,Establishment Expenditure of the Centre,1,192.88,6.0,198.88,242.16,7.0,249.16,252.0,7.0,259.0,253.0,7.0,260.0
+14,18,Statement 3,Election Commission,Other Central Sector Expenditure,2,-3.9,-1.49,-5.39,,,,,,,,,
+14,18,Statement 3,Supreme Court of India,Total Ministry/Department,,328.0,,328.0,334.96,,334.96,350.86,,350.86,401.46,,401.46
+14,18,Statement 3,Supreme Court of India,Establishment Expenditure of the Centre,1,328.0,,328.0,334.96,,334.96,350.86,,350.86,401.46,,401.46
+14,18,Statement 3,"Ministry of Micro, Small and Medium Enterprises",Total Ministry/Department,,5431.64,23.63,5455.27,15329.65,370.0,15699.65,15335.45,364.2,15699.65,20916.0,506.0,21422.0
+14,18,Statement 3,"Ministry of Micro, Small and Medium Enterprises",Central Sector Schemes/Projects,1,5328.56,23.63,5352.19,15259.21,370.0,15629.21,15276.2,364.2,15640.4,20851.85,506.0,21357.85
+14,18,Statement 3,"Ministry of Micro, Small and Medium Enterprises",Centrally Sponsored Schemes,2,,,,0.04,,0.04,,,,,,
+14,18,Statement 3,"Ministry of Micro, Small and Medium Enterprises",Establishment Expenditure of the Centre,3,295.64,,295.64,70.4,,70.4,59.25,,59.25,64.15,,64.15
+14,18,Statement 3,"Ministry of Micro, Small and Medium Enterprises",Other Central Sector Expenditure,4,-192.56,,-192.56,,,,,,,,,
+14,18,Statement 3,Ministry of Mines,Total Ministry/Department,,1296.06,51.81,1347.87,1398.49,68.33,1466.82,1426.28,53.72,1480.0,1446.79,61.21,1508.0
+14,18,Statement 3,Ministry of Mines,Establishment Expenditure of the Centre,1,807.59,,807.59,804.52,,804.52,840.78,,840.78,853.02,,853.02
+14,18,Statement 3,Ministry of Mines,Other Central Sector Expenditure,2,488.47,51.81,540.28,593.97,68.33,662.3,585.5,53.72,639.22,593.77,61.21,654.98
+14,18,Statement 3,Ministry of Minority Affairs,Total Ministry/Department,,3810.29,110.0,3920.29,4657.75,153.02,4810.77,4246.45,100.0,4346.45,4861.5,159.0,5020.5
+14,18,Statement 3,Ministry of Minority Affairs,Central Sector Schemes/Projects,1,2688.12,110.0,2798.12,2863.0,153.0,3016.0,2745.85,100.0,2845.85,2915.91,159.0,3074.91
+14,18,Statement 3,Ministry of Minority Affairs,Centrally Sponsored Schemes,2,1083.33,,1083.33,1563.99,0.01,1564.0,1373.55,,1373.55,1810.0,,1810.0
+14,18,Statement 3,Ministry of Minority Affairs,Establishment Expenditure of the Centre,3,28.65,,28.65,125.99,0.01,126.0,38.94,,38.94,120.03,,120.03
+14,18,Statement 3,Ministry of Minority Affairs,Other Central Sector Expenditure,4,10.19,,10.19,104.77,,104.77,88.11,,88.11,15.56,,15.56
+14,18,Statement 3,Ministry of New and Renewable Energy,Total Ministry/Department,,2493.34,149.96,2643.3,5743.0,10.0,5753.0,5071.8,2610.0,7681.8,6888.94,11.74,6900.68
+14,18,Statement 3,Ministry of New and Renewable Energy,Central Sector Schemes/Projects,1,2866.81,,2866.81,5645.28,,5645.28,4987.5,,4987.5,6787.93,,6787.93
+14,18,Statement 3,Ministry of New and Renewable Energy,Establishment Expenditure of the Centre,2,34.21,149.96,184.17,49.05,10.0,59.05,44.3,110.0,154.3,56.01,11.74,67.75
+14,18,Statement 3,Ministry of New and Renewable Energy,Other Central Sector Expenditure,3,-407.68,,-407.68,48.67,,48.67,40.0,2500.0,2540.0,45.0,,45.0
+14,18,Statement 3,Ministry of Panchayati Raj,Total Ministry/Department,,686.26,,686.26,913.43,,913.43,868.38,,868.38,868.57,,868.57
+14,18,Statement 3,Ministry of Panchayati Raj,Central Sector Schemes/Projects,1,89.31,,89.31,215.2,,215.2,148.19,,148.19,163.2,,163.2
+14,18,Statement 3,Ministry of Panchayati Raj,Centrally Sponsored Schemes,2,567.4,,567.4,661.0,,661.0,682.22,,682.22,663.0,,663.0
+14,18,Statement 3,Ministry of Panchayati Raj,Establishment Expenditure of the Centre,3,29.55,,29.55,37.23,,37.23,37.97,,37.97,42.37,,42.37
+14,18,Statement 3,Ministry of Parliamentary Affairs,Total Ministry/Department,,28.98,,28.98,65.07,,65.07,65.0,,65.0,66.4,,66.4
+14,18,Statement 3,Ministry of Parliamentary Affairs,Establishment Expenditure of the Centre,1,28.98,,28.98,65.07,,65.07,65.0,,65.0,66.4,,66.4
+14,18,Statement 3,"Ministry of Personnel, Public Grievances and Pensions",Total Ministry/Department,,1525.33,116.18,1641.51,1860.21,198.36,2058.57,1796.4,153.6,1950.0,2111.88,225.3,2337.18
+14,18,Statement 3,"Ministry of Personnel, Public Grievances and Pensions",Central Sector Schemes/Projects,1,55.38,40.78,96.16,107.31,91.01,198.32,86.99,62.01,149.0,176.66,78.34,255.0
+14,18,Statement 3,"Ministry of Personnel, Public Grievances and Pensions",Establishment Expenditure of the Centre,2,1438.99,71.02,1510.01,1581.96,107.35,1689.31,1607.49,91.59,1699.08,1503.57,146.96,1650.53
+14,18,Statement 3,"Ministry of Personnel, Public Grievances and Pensions",Other Central Sector Expenditure,3,30.96,4.38,35.34,170.94,,170.94,101.92,,101.92,431.65,,431.65
+15,19,Statement 3,Central Vigilance Commission,Total Ministry/Department,,33.49,,33.49,38.67,,38.67,38.63,,38.63,41.96,,41.96
+15,19,Statement 3,Central Vigilance Commission,Establishment Expenditure of the Centre,1,33.49,,33.49,38.67,,38.67,38.63,,38.63,41.96,,41.96
+15,19,Statement 3,Ministry of Petroleum and Natural Gas,Total Ministry/Department,,39876.88,2313.0,42189.88,15516.78,427.0,15943.78,8448.47,397.66,8846.13,8339.86,600.0,8939.86
+15,19,Statement 3,Ministry of Petroleum and Natural Gas,Central Sector Schemes/Projects,1,39554.45,2313.0,41867.45,15268.0,427.0,15695.0,8221.48,397.66,8619.14,8137.82,600.0,8737.82
+15,19,Statement 3,Ministry of Petroleum and Natural Gas,Establishment Expenditure of the Centre,2,34.33,,34.33,45.41,,45.41,47.15,,47.15,49.16,,49.16
+15,19,Statement 3,Ministry of Petroleum and Natural Gas,Other Central Sector Expenditure,3,288.1,,288.1,203.37,,203.37,179.84,,179.84,152.88,,152.88
+15,19,Statement 3,Ministry of Planning,Total Ministry/Department,,748.4,0.28,748.68,1061.99,0.78,1062.77,1070.01,0.77,1070.78,310.67,10.75,321.42
+15,19,Statement 3,Ministry of Planning,Central Sector Schemes/Projects,1,641.78,0.28,642.06,954.22,0.78,955.0,928.7,0.77,929.47,151.32,10.75,162.07
+15,19,Statement 3,Ministry of Planning,Establishment Expenditure of the Centre,2,97.73,,97.73,98.1,,98.1,132.05,,132.05,149.49,,149.49
+15,19,Statement 3,Ministry of Planning,Other Central Sector Expenditure,3,8.89,,8.89,9.67,,9.67,9.26,,9.26,9.86,,9.86
+15,19,Statement 3,"Ministry of Ports, Shipping and Waterways",Total Ministry/Department,,1219.07,168.63,1387.7,1519.35,183.0,1702.35,976.57,608.8,1585.37,1135.19,574.31,1709.5
+15,19,Statement 3,"Ministry of Ports, Shipping and Waterways",Central Sector Schemes/Projects,1,885.92,159.99,1045.91,1102.5,158.0,1260.5,492.18,100.0,592.18,622.29,,622.29
+15,19,Statement 3,"Ministry of Ports, Shipping and Waterways",Establishment Expenditure of the Centre,2,54.5,,54.5,77.0,,77.0,75.14,,75.14,80.0,,80.0
+15,19,Statement 3,"Ministry of Ports, Shipping and Waterways",Other Central Sector Expenditure,3,278.65,8.64,287.29,339.85,25.0,364.85,409.25,508.8,918.05,432.9,574.31,1007.21
+15,19,Statement 3,Ministry of Power,Total Ministry/Department,,10211.94,369.98,10581.92,13757.03,1564.97,15322.0,14236.38,1085.62,15322.0,16061.63,13.11,16074.74
+15,19,Statement 3,Ministry of Power,Central Sector Schemes/Projects,1,7271.02,318.67,7589.69,9444.17,1564.95,11009.12,10527.52,1085.62,11613.14,11192.69,13.11,11205.8
+15,19,Statement 3,Ministry of Power,Establishment Expenditure of the Centre,2,188.48,,188.48,226.6,,226.6,210.05,,210.05,231.79,,231.79
+15,19,Statement 3,Ministry of Power,Other Central Sector Expenditure,3,2752.44,51.31,2803.75,4086.26,0.02,4086.28,3498.81,,3498.81,4637.15,,4637.15
+15,19,Statement 3,"Staff, Household and Allowances of the President",Total Ministry/Department,,68.13,,68.13,74.47,,74.47,70.0,,70.0,79.45,,79.45
+15,19,Statement 3,"Staff, Household and Allowances of the President",Establishment Expenditure of the Centre,1,68.13,,68.13,74.47,,74.47,70.0,,70.0,79.45,,79.45
+15,19,Statement 3,Lok Sabha,Total Ministry/Department,,559.79,,559.79,855.0,,855.0,700.45,,700.45,800.0,,800.0
+15,19,Statement 3,Lok Sabha,Establishment Expenditure of the Centre,1,559.79,,559.79,855.0,,855.0,700.45,,700.45,800.0,,800.0
+15,19,Statement 3,Rajya Sabha,Total Ministry/Department,,346.51,,346.51,446.5,,446.5,405.54,,405.54,430.96,,430.96
+15,19,Statement 3,Rajya Sabha,Establishment Expenditure of the Centre,1,346.51,,346.51,446.5,,446.5,405.54,,405.54,430.96,,430.96
+15,19,Statement 3,Secretariat of the Vice-President,Total Ministry/Department,,5.93,,5.93,7.43,,7.43,7.31,,7.31,8.64,,8.64
+15,19,Statement 3,Secretariat of the Vice-President,Establishment Expenditure of the Centre,1,5.93,,5.93,7.43,,7.43,7.31,,7.31,8.64,,8.64
+15,19,Statement 3,Union Public Service Commission,Total Ministry/Department,,284.94,,284.94,304.17,,304.17,316.18,,316.18,330.58,,330.58
+15,19,Statement 3,Union Public Service Commission,Establishment Expenditure of the Centre,1,284.94,,284.94,304.17,,304.17,316.18,,316.18,330.58,,330.58
+15,19,Statement 3,Ministry of Railways,Total Ministry/Department,,2835.63,109323.69,112159.32,2954.64,107100.0,110054.64,2956.12,117100.0,120056.12,3267.13,137100.0,140367.13
+15,19,Statement 3,Ministry of Railways,Central Sector Schemes/Projects,1,,109323.69,109323.69,,107100.0,107100.0,,117100.0,117100.0,,137100.0,137100.0
+15,19,Statement 3,Ministry of Railways,Establishment Expenditure of the Centre,2,2835.63,,2835.63,2954.64,,2954.64,2956.12,,2956.12,3267.13,,3267.13
+15,19,Statement 3,Ministry of Road Transport and Highways,Total Ministry/Department,,9964.27,89194.82,99159.09,9870.89,108230.11,118101.0,9898.44,121250.63,131149.07,11363.71,187744.0,199107.71
+16,20,Statement 3,Ministry of Road Transport and Highways,Central Sector Schemes/Projects,1,9833.57,89194.82,99028.39,9717.24,108230.11,117947.35,9744.79,121250.63,130995.42,11200.48,187744.0,198944.48
+16,20,Statement 3,Ministry of Road Transport and Highways,Establishment Expenditure of the Centre,2,130.7,,130.7,153.65,,153.65,153.65,,153.65,163.23,,163.23
+16,20,Statement 3,Department of Rural Development,Total Ministry/Department,,196416.71,,196416.71,131519.08,,131519.08,153558.07,,153558.07,135944.29,,135944.29
+16,20,Statement 3,Department of Rural Development,Central Sector Schemes/Projects,1,215.61,,215.61,364.39,,364.39,176.54,,176.54,212.2,,212.2
+16,20,Statement 3,Department of Rural Development,Centrally Sponsored Schemes,2,196146.73,,196146.73,130977.61,,130977.61,153204.45,,153204.45,135538.73,,135538.73
+16,20,Statement 3,Department of Rural Development,Establishment Expenditure of the Centre,3,61.55,,61.55,53.08,,53.08,53.08,,53.08,57.9,,57.9
+16,20,Statement 3,Department of Rural Development,Other Central Sector Expenditure,4,-7.18,,-7.18,124.0,,124.0,124.0,,124.0,135.46,,135.46
+16,20,Statement 3,Department of Land Resources,Total Ministry/Department,,1175.98,,1175.98,2170.42,,2170.42,1484.52,,1484.52,2259.34,,2259.34
+16,20,Statement 3,Department of Land Resources,Central Sector Schemes/Projects,1,225.14,,225.14,150.0,,150.0,250.0,,250.0,239.25,,239.25
+16,20,Statement 3,Department of Land Resources,Centrally Sponsored Schemes,2,937.84,,937.84,2000.0,,2000.0,1216.0,,1216.0,2000.0,,2000.0
+16,20,Statement 3,Department of Land Resources,Establishment Expenditure of the Centre,3,13.0,,13.0,20.42,,20.42,18.52,,18.52,20.09,,20.09
+16,20,Statement 3,Department of Science and Technology,Total Ministry/Department,,4807.08,86.48,4893.56,5945.39,122.0,6067.39,5170.8,69.2,5240.0,5917.3,82.7,6000.0
+16,20,Statement 3,Department of Science and Technology,Central Sector Schemes/Projects,1,2189.39,,2189.39,2915.69,,2915.69,2141.58,,2141.58,2894.55,,2894.55
+16,20,Statement 3,Department of Science and Technology,Establishment Expenditure of the Centre,2,503.77,86.48,590.25,591.7,122.0,713.7,566.22,69.2,635.42,619.75,82.7,702.45
+16,20,Statement 3,Department of Science and Technology,Other Central Sector Expenditure,3,2113.92,,2113.92,2438.0,,2438.0,2463.0,,2463.0,2403.0,,2403.0
+16,20,Statement 3,Department of Biotechnology,Total Ministry/Department,,2259.1,,2259.1,3502.37,,3502.37,2961.0,,2961.0,2581.0,,2581.0
+16,20,Statement 3,Department of Biotechnology,Central Sector Schemes/Projects,1,1628.32,,1628.32,2620.28,,2620.28,2204.0,,2204.0,1680.0,,1680.0
+16,20,Statement 3,Department of Biotechnology,Establishment Expenditure of the Centre,2,26.4,,26.4,35.18,,35.18,34.82,,34.82,35.18,,35.18
+16,20,Statement 3,Department of Biotechnology,Other Central Sector Expenditure,3,604.38,,604.38,846.91,,846.91,722.18,,722.18,865.82,,865.82
+16,20,Statement 3,Department of Scientific and Industrial Research,Total Ministry/Department,,4193.4,5.42,4198.82,5202.12,22.15,5224.27,5285.57,12.15,5297.72,5623.96,12.5,5636.46
+16,20,Statement 3,Department of Scientific and Industrial Research,Central Sector Schemes/Projects,1,20.13,1.8,21.93,33.35,1.65,35.0,30.35,1.65,32.0,37.0,2.0,39.0
+16,20,Statement 3,Department of Scientific and Industrial Research,Establishment Expenditure of the Centre,2,11.76,3.5,15.26,17.0,20.0,37.0,14.0,10.0,24.0,17.7,10.0,27.7
+16,20,Statement 3,Department of Scientific and Industrial Research,Other Central Sector Expenditure,3,4161.51,0.12,4161.63,5151.77,0.5,5152.27,5241.22,0.5,5241.72,5569.26,0.5,5569.76
+16,20,Statement 3,Ministry of Skill Development and Entrepreneurship,Total Ministry/Department,,2551.24,74.17,2625.41,2711.53,73.7,2785.23,2701.53,83.7,2785.23,2847.54,151.46,2999.0
+16,20,Statement 3,Ministry of Skill Development and Entrepreneurship,Centrally Sponsored Schemes,1,2372.61,0.02,2372.63,2504.83,0.17,2505.0,2453.3,0.17,2453.47,2613.07,0.17,2613.24
+16,20,Statement 3,Ministry of Skill Development and Entrepreneurship,Establishment Expenditure of the Centre,2,185.57,74.15,259.72,206.7,73.53,280.23,248.23,83.53,331.76,234.47,151.29,385.76
+16,20,Statement 3,Ministry of Skill Development and Entrepreneurship,Other Central Sector Expenditure,3,-6.94,,-6.94,,,,,,,,,
+16,20,Statement 3,Department of Social Justice and Empowerment,Total Ministry/Department,,7965.03,100.0,8065.03,10147.62,370.0,10517.62,10085.0,95.0,10180.0,11687.51,235.0,11922.51
+16,20,Statement 3,Department of Social Justice and Empowerment,Central Sector Schemes/Projects,1,454.51,,454.51,1275.0,120.0,1395.0,656.4,90.0,746.4,859.5,110.0,969.5
+16,20,Statement 3,Department of Social Justice and Empowerment,Centrally Sponsored Schemes,2,7374.6,,7374.6,8705.62,,8705.62,9251.6,,9251.6,10641.01,,10641.01
+17,21,Statement 3,Department of Social Justice and Empowerment,Establishment Expenditure of the Centre,3,81.04,,81.04,121.0,,121.0,121.0,,121.0,127.0,,127.0
+17,21,Statement 3,Department of Social Justice and Empowerment,Other Central Sector Expenditure,4,54.88,100.0,154.88,46.0,250.0,296.0,56.0,5.0,61.0,60.0,125.0,185.0
+17,21,Statement 3,Department of Empowerment of Persons with Disabilities,Total Ministry/Department,,852.52,,852.52,1171.76,0.01,1171.77,1044.31,,1044.31,1212.41,0.01,1212.42
+17,21,Statement 3,Department of Empowerment of Persons with Disabilities,Central Sector Schemes/Projects,1,506.93,,506.93,709.77,,709.77,572.31,,572.31,740.39,,740.39
+17,21,Statement 3,Department of Empowerment of Persons with Disabilities,Establishment Expenditure of the Centre,2,23.46,,23.46,34.06,,34.06,34.0,,34.0,40.5,,40.5
+17,21,Statement 3,Department of Empowerment of Persons with Disabilities,Other Central Sector Expenditure,3,322.13,,322.13,427.93,0.01,427.94,438.0,,438.0,431.52,0.01,431.53
+17,21,Statement 3,Department of Space,Total Ministry/Department,,4840.45,4633.96,9474.41,5720.46,8228.63,13949.09,5720.46,6921.54,12642.0,6234.4,7465.6,13700.0
+17,21,Statement 3,Department of Space,Central Sector Schemes/Projects,1,4063.63,4614.98,8678.61,4810.37,7520.75,12331.12,4770.08,6168.84,10938.92,5193.7,7448.3,12642.0
+17,21,Statement 3,Department of Space,Establishment Expenditure of the Centre,2,154.88,21.51,176.39,178.59,7.88,186.47,197.83,8.17,206.0,242.7,16.3,259.0
+17,21,Statement 3,Department of Space,Other Central Sector Expenditure,3,621.94,-2.53,619.41,731.5,700.0,1431.5,752.55,744.53,1497.08,798.0,1.0,799.0
+17,21,Statement 3,Ministry of Statistics and Programme Implementation,Total Ministry/Department,,2420.38,2.88,2423.26,1396.09,13.04,1409.13,3721.17,15.83,3737.0,5378.08,20.0,5398.08
+17,21,Statement 3,Ministry of Statistics and Programme Implementation,Central Sector Schemes/Projects,1,1751.84,2.88,1754.72,633.94,13.04,646.98,2964.67,15.83,2980.5,4507.11,20.0,4527.11
+17,21,Statement 3,Ministry of Statistics and Programme Implementation,Establishment Expenditure of the Centre,2,682.92,,682.92,762.15,,762.15,756.5,,756.5,870.97,,870.97
+17,21,Statement 3,Ministry of Statistics and Programme Implementation,Other Central Sector Expenditure,3,-14.38,,-14.38,,,,,,,,,
+17,21,Statement 3,Ministry of Steel,Total Ministry/Department,,74.31,,74.31,39.25,,39.25,43.0,,43.0,47.0,,47.0
+17,21,Statement 3,Ministry of Steel,Central Sector Schemes/Projects,1,0.54,,0.54,5.0,,5.0,4.81,,4.81,4.49,,4.49
+17,21,Statement 3,Ministry of Steel,Establishment Expenditure of the Centre,2,29.06,,29.06,32.78,,32.78,36.73,,36.73,40.51,,40.51
+17,21,Statement 3,Ministry of Steel,Other Central Sector Expenditure,3,44.71,,44.71,1.47,,1.47,1.46,,1.46,2.0,,2.0
+17,21,Statement 3,Ministry of Textiles,Total Ministry/Department,,3061.36,48.09,3109.45,3591.61,40.03,3631.64,11408.81,40.51,11449.32,12357.11,25.03,12382.14
+17,21,Statement 3,Ministry of Textiles,Central Sector Schemes/Projects,1,3020.69,48.09,3068.78,3404.61,40.0,3444.61,11222.93,40.48,11263.41,12011.92,5.0,12016.92
+17,21,Statement 3,Ministry of Textiles,Establishment Expenditure of the Centre,2,78.19,,78.19,102.0,,102.0,100.88,,100.88,317.18,20.0,337.18
+17,21,Statement 3,Ministry of Textiles,Other Central Sector Expenditure,3,-37.52,,-37.52,85.0,0.03,85.03,85.0,0.03,85.03,28.01,0.03,28.04
+17,21,Statement 3,Ministry of Tourism,Total Ministry/Department,,1096.82,,1096.82,2026.77,,2026.77,969.8,,969.8,2400.0,,2400.0
+17,21,Statement 3,Ministry of Tourism,Central Sector Schemes/Projects,1,992.15,,992.15,1895.4,,1895.4,846.23,,846.23,2270.34,,2270.34
+17,21,Statement 3,Ministry of Tourism,Centrally Sponsored Schemes,2,6.25,,6.25,5.27,,5.27,5.27,,5.27,5.27,,5.27
+17,21,Statement 3,Ministry of Tourism,Establishment Expenditure of the Centre,3,98.42,,98.42,126.1,,126.1,118.3,,118.3,124.39,,124.39
+17,21,Statement 3,Ministry of Tribal Affairs,Total Ministry/Department,,5494.51,,5494.51,7524.85,0.02,7524.87,6181.3,,6181.3,8401.92,50.0,8451.92
+17,21,Statement 3,Ministry of Tribal Affairs,Central Sector Schemes/Projects,1,1489.42,,1489.42,1831.03,0.02,1831.05,1428.74,,1428.74,2895.53,50.0,2945.53
+17,21,Statement 3,Ministry of Tribal Affairs,Centrally Sponsored Schemes,2,3172.12,,3172.12,4303.01,,4303.01,3797.72,,3797.72,4111.38,,4111.38
+17,21,Statement 3,Ministry of Tribal Affairs,Establishment Expenditure of the Centre,3,32.97,,32.97,40.8,,40.8,54.84,,54.84,45.0,,45.0
+18,22,Statement 3,Ministry of Tribal Affairs,Other Grants/Loans/Transfers,4,800.0,,800.0,1350.01,,1350.01,900.0,,900.0,1350.01,,1350.01
+18,22,Statement 3,Ministry of Women and Child Development,Total Ministry/Department,,19230.58,0.48,19231.06,24430.0,5.0,24435.0,23198.0,2.0,23200.0,25170.28,2.0,25172.28
+18,22,Statement 3,Ministry of Women and Child Development,Centrally Sponsored Schemes,1,19007.7,0.48,19008.18,24157.0,5.0,24162.0,22958.29,2.0,22960.29,24937.35,2.0,24939.35
+18,22,Statement 3,Ministry of Women and Child Development,Establishment Expenditure of the Centre,2,54.72,,54.72,77.8,,77.8,69.48,,69.48,73.1,,73.1
+18,22,Statement 3,Ministry of Women and Child Development,Other Central Sector Expenditure,3,168.16,,168.16,195.2,,195.2,170.23,,170.23,159.83,,159.83
+18,22,Statement 3,Ministry of Youth Affairs and Sports,Total Ministry/Department,,1748.45,,1748.45,2549.41,46.73,2596.14,2754.52,2.5,2757.02,3057.28,5.32,3062.6
+18,22,Statement 3,Ministry of Youth Affairs and Sports,Central Sector Schemes/Projects,1,778.43,,778.43,1395.01,3.0,1398.01,1566.5,2.5,1569.0,1827.18,5.32,1832.5
+18,22,Statement 3,Ministry of Youth Affairs and Sports,Establishment Expenditure of the Centre,2,29.66,,29.66,36.0,,36.0,35.02,,35.02,39.1,,39.1
+18,22,Statement 3,Ministry of Youth Affairs and Sports,Other Central Sector Expenditure,3,940.36,,940.36,1118.4,43.73,1162.13,1153.0,,1153.0,1191.0,,1191.0
+18,22,Statement 3,Grand Total,Statement 3 aggregate,,3083518.99,426317.39,3509836.38,2928999.89,554235.74,3483235.63,3167288.43,602711.3,3769999.73,3194662.9,750245.77,3944908.67
+18,22,Statement 3,Central Sector Schemes/Projects,Statement 3 aggregate,,968810.82,388006.47,1356817.29,607968.41,443735.0,1051703.41,718124.25,476953.33,1195077.58,622308.81,558775.44,1181084.25
+18,22,Statement 3,Centrally Sponsored Schemes,Statement 3 aggregate,,383952.49,23.2,383975.69,381235.45,69.1,381304.55,415305.23,45.58,415350.81,442771.63,9.56,442781.19
+18,22,Statement 3,Establishment Expenditure of the Centre,Statement 3 aggregate,,588042.14,6407.24,594449.38,600756.99,8257.12,609014.11,691357.36,9183.65,700541.01,680191.56,12022.59,692214.15
+18,22,Statement 3,Finance Commission Grants,Statement 3 aggregate,,184062.5,,184062.5,220843.0,,220843.0,211065.0,,211065.0,192108.0,,192108.0
+18,22,Statement 3,Other Central Sector Expenditure,Statement 3 aggregate,,786182.53,12091.85,798274.38,923883.62,88002.77,1011886.39,926920.05,94710.48,1021630.53,1066775.61,66037.42,1132813.03
+18,22,Statement 3,Other Grants/Loans/Transfers,Statement 3 aggregate,,172468.51,19788.63,192257.14,194312.42,14171.75,208484.17,204516.54,21818.26,226334.8,190507.29,113400.76,303908.05
