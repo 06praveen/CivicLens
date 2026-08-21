@@ -10,83 +10,90 @@
 
 export interface GlossaryTerm {
   id: string;
-  term: string;
-  termHi: string;
-  simpleMeaning: string;
-  simpleMeaningHi: string;
-  example: string;
-  exampleHi: string;
   category: string;
-  officialDocRef: string;
+  term: string;
+  termHi?: string;
+  shortCardDesc: string;
+  whatItMeans: string;
+  whyItMatters: string;
+  simpleExample: string;
+  howItRelates: string;
+  howCivicLensHelps: string;
 }
 
 export const GLOSSARY_TERMS: GlossaryTerm[] = [
   {
     id: "fiscal-deficit",
+    category: "MACROECONOMIC INDICATOR",
     term: "Fiscal Deficit",
     termHi: "राजकोषीय घाटा",
-    simpleMeaning: "The amount by which government spending is greater than government income in a year.",
-    simpleMeaningHi: "एक वर्ष में सरकार का खर्च उसकी कुल कमाई से जितना अधिक होता है, उसे राजकोषीय घाटा कहते हैं।",
-    example: "If the government earns ₹100 and spends ₹110, the fiscal deficit is ₹10.",
-    exampleHi: "यदि सरकार ₹100 कमाती है और ₹110 खर्च करती है, तो राजकोषीय घाटा ₹10 है।",
-    category: "Macroeconomic Indicator",
-    officialDocRef: "Union Budget Statement — Fiscal Policy Strategy",
+    shortCardDesc: "When the government's total spending is greater than the money it earns, the difference is called the fiscal deficit.",
+    whatItMeans: "Fiscal deficit is the gap between the government's total expenditure and its total receipts, excluding certain borrowings.",
+    whyItMatters: "It helps indicate how much the government may need to borrow to meet its spending requirements.",
+    simpleExample: "If the government spends ₹120 but receives ₹100, there is a gap of ₹20 that needs to be financed.",
+    howItRelates: "The Union Budget includes estimates of government receipts, expenditure, and fiscal deficit.",
+    howCivicLensHelps: "CivicLens helps users explore recorded budget allocations and understand how government spending is distributed across departments and categories."
   },
   {
     id: "capital-expenditure",
+    category: "BUDGET ALLOCATION TYPE",
     term: "Capital Expenditure (Capex)",
     termHi: "पूंजीगत व्यय (कैपेक्स)",
-    simpleMeaning: "Money spent on building long-term assets like highways, railways, bridges, schools, and hospitals.",
-    simpleMeaningHi: "राजमार्ग, रेलवे, पुल, स्कूल और अस्पताल जैसी दीर्घकालिक संपत्तियों के निर्माण पर खर्च किया गया धन।",
-    example: "Building a new AIIMS hospital or dedicated freight corridor.",
-    exampleHi: "नया एम्स अस्पताल या समर्पित मालगाड़ी कॉरिडोर बनाना।",
-    category: "Budget Allocation Type",
-    officialDocRef: "Budget at a Glance — Expenditure Summary",
+    shortCardDesc: "Money used to create or improve long-term public assets such as roads, railways, schools, hospitals, and infrastructure.",
+    whatItMeans: "Capital expenditure is spending used to create, acquire, or improve long-term public assets.",
+    whyItMatters: "It can support long-term development by funding infrastructure and other durable assets.",
+    simpleExample: "Money spent to build a new railway line or highway is generally an example of capital expenditure.",
+    howItRelates: "Budget records can distinguish between revenue and capital components where such data is available.",
+    howCivicLensHelps: "Users can view available capital expenditure figures and compare recorded allocations across financial years."
   },
   {
     id: "revenue-expenditure",
+    category: "BUDGET ALLOCATION TYPE",
     term: "Revenue Expenditure",
     termHi: "राजस्व व्यय",
-    simpleMeaning: "Routine day-to-day operational expenses of government departments, including salaries, pensions, and subsidies.",
-    simpleMeaningHi: "सरकारी विभागों के नियमित दैनिक परिचालन खर्च, जिनमें वेतन, पेंशन और सब्सिडी शामिल हैं।",
-    example: "Paying salaries to government teachers and healthcare staff.",
-    exampleHi: "सरकारी शिक्षकों और स्वास्थ्य कर्मचारियों को वेतन देना।",
-    category: "Budget Allocation Type",
-    officialDocRef: "Demand for Grants — Revenue Account",
+    shortCardDesc: "Money spent on the government's regular day-to-day needs, such as salaries, pensions, subsidies, and running public services.",
+    whatItMeans: "Revenue expenditure covers regular government spending needed to run public services and meet ongoing obligations.",
+    whyItMatters: "It supports the day-to-day functioning of government and delivery of public services.",
+    simpleExample: "Government spending on salaries, pensions, routine administration, and some subsidies can fall under revenue expenditure.",
+    howItRelates: "Revenue expenditure forms a major part of government spending and may be recorded separately in budget data.",
+    howCivicLensHelps: "CivicLens allows users to explore available revenue expenditure data and compare it with other recorded budget figures."
   },
   {
-    id: "allocation",
+    id: "budget-allocation",
+    category: "BUDGET PROCESS",
     term: "Budget Allocation",
     termHi: "बजट आवंटन",
-    simpleMeaning: "The specific amount of money reserved by parliament for a ministry, department, or public scheme.",
-    simpleMeaningHi: "संसद द्वारा किसी मंत्रालय, विभाग या सार्वजनिक योजना के लिए निर्धारित विशिष्ट धनराशि।",
-    example: "₹1.48 Lakh Crore allocated for Education in FY 2026–27.",
-    exampleHi: "वित्त वर्ष 2026–27 में शिक्षा के लिए ₹1.48 लाख करोड़ आवंटित किए गए।",
-    category: "Budget Process",
-    officialDocRef: "Annual Financial Statement — Demand Summary",
+    shortCardDesc: "The amount of money assigned in the budget for a particular ministry, department, programme, scheme, or purpose.",
+    whatItMeans: "A budget allocation is an amount assigned for a specific government purpose.",
+    whyItMatters: "It shows where public money is planned to be spent.",
+    simpleExample: "A ministry may receive a specific allocation for education, healthcare, infrastructure, or another public purpose.",
+    howItRelates: "Allocations can be organised by ministries, departments, schemes, expenditure categories, and budget heads.",
+    howCivicLensHelps: "CivicLens lets users explore available budget allocations by financial year, department, category, and budget item."
   },
   {
     id: "subsidy",
+    category: "WELFARE SPENDING",
     term: "Subsidy",
     termHi: "सब्सिडी / छूट",
-    simpleMeaning: "Financial support given by the government to make essential goods like food, fertilizer, and fuel affordable for citizens.",
-    simpleMeaningHi: "भोजन, उर्वरक और ईंधन जैसी आवश्यक वस्तुओं को नागरिकों के लिए किफायती बनाने के लिए सरकार द्वारा दी जाने वाली वित्तीय सहायता।",
-    example: "PM Garib Kalyan Anna Yojana free ration subsidy.",
-    exampleHi: "पीएम गरीब कल्याण अन्न योजना मुफ्त राशन सब्सिडी।",
-    category: "Welfare Spending",
-    officialDocRef: "Expenditure Profile — Statement 11",
+    shortCardDesc: "Financial support provided to reduce the cost of important goods or services and make them more affordable for people.",
+    whatItMeans: "A subsidy is financial support provided by the government to reduce costs or support a particular activity or group.",
+    whyItMatters: "Subsidies can help make important goods and services more affordable or support specific policy objectives.",
+    simpleExample: "Government support that helps reduce the effective cost of an essential product can be considered a subsidy.",
+    howItRelates: "Budget documents may contain allocations related to different subsidy programmes.",
+    howCivicLensHelps: "Users can search and explore relevant recorded budget items and allocations available in the CivicLens dataset."
   },
   {
     id: "revised-estimate",
+    category: "BUDGET PROCESS",
     term: "Revised Estimate (RE)",
     termHi: "संशोधित अनुमान (आरई)",
-    simpleMeaning: "The updated budget figure midway through the financial year based on actual spending performance.",
-    simpleMeaningHi: "वास्तविक खर्च के प्रदर्शन के आधार पर वित्तीय वर्ष के मध्य में अद्यतन बजट आंकड़ा।",
-    example: "Adjusting midday meal budget mid-year due to inflation.",
-    exampleHi: "मुद्रास्फीति के कारण मध्य वर्ष में दोपहर के भोजन के बजट को समायोजित करना।",
-    category: "Budget Process",
-    officialDocRef: "Budget Highlights — Revised Estimates",
-  },
+    shortCardDesc: "An updated estimate of government spending or receipts during the financial year, based on the latest available information.",
+    whatItMeans: "A Revised Estimate is an updated estimate prepared during or after reviewing the financial year's budget performance.",
+    whyItMatters: "Actual government spending may differ from the original budget estimate because of changing requirements and circumstances.",
+    simpleExample: "If ₹1,000 was originally planned but updated information suggests actual spending may be ₹1,100, the revised estimate may reflect that change.",
+    howItRelates: "Budget documents may use Budget Estimates and Revised Estimates to present planned and updated figures.",
+    howCivicLensHelps: "Only display Revised Estimate data where it actually exists in the available CivicLens dataset. Do not invent or estimate RE values."
+  }
 ];
 
 export interface RegionComparison {

@@ -14,8 +14,9 @@ export default function Login() {
   const [loading, setLoading] = useState(false);
   const [errorMsg, setErrorMsg] = useState<string | null>(null);
 
-  const fromLocation = (location.state as any)?.from;
-  const from = fromLocation ? `${fromLocation.pathname}${fromLocation.search || ""}` : "/";
+  const fromState = location.state as any;
+  const fromLocation = fromState?.from;
+  const from = typeof fromLocation === "string" ? fromLocation : fromLocation?.pathname ? `${fromLocation.pathname}${fromLocation.search || ""}` : "/";
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -29,7 +30,7 @@ export default function Login() {
 
     try {
       await login(usernameOrEmail, password);
-      navigate(from, { replace: true });
+      navigate(from, { state: { openReportModal: fromState?.openReportModal }, replace: true });
     } catch (err: any) {
       console.error("Login error:", err);
       setErrorMsg(err.message || "Failed to log in. Please check your credentials.");

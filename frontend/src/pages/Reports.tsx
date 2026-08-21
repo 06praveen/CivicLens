@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
+import { useNavigate, useLocation } from "react-router-dom";
 import { useApp } from "@/context/AppContext";
+import { useAuth } from "@/context/AuthContext";
 import { PageLayout } from "@/components/PageLayout";
 import { formatCr } from "@/data/budgetData";
 import { getBudgetFilters, getReportOptions, createIssueReport, getMyReports } from "@/api/budgets";
@@ -47,7 +49,10 @@ interface IssueReportItem {
 }
 
 export default function Reports() {
-  const { t, user, setAuthModalOpen } = useApp();
+  const { t } = useApp();
+  const { user, isAuthenticated } = useAuth();
+  const navigate = useNavigate();
+  const location = useLocation();
 
   // Filters State
   const [selectedYear, setSelectedYear] = useState<string>("2024-2025");
@@ -123,14 +128,21 @@ export default function Reports() {
       .catch(err => console.warn("Backend getReportOptions error:", err));
   }, []);
 
+  // Check if returning from login redirect to auto-open report modal
+  useEffect(() => {
+    if (location.state?.openReportModal && isAuthenticated && user) {
+      setIsReportModalOpen(true);
+    }
+  }, [location.state, isAuthenticated, user]);
+
   // Load user's submitted reports if authenticated
   useEffect(() => {
-    if (user) {
+    if (isAuthenticated && user) {
       getMyReports()
         .then(data => setMyReports(data))
         .catch(err => console.warn("Backend getMyReports error:", err));
     }
-  }, [user, formSuccessMsg]);
+  }, [isAuthenticated, user, formSuccessMsg]);
 
   // Fetch report preview when filters change
   useEffect(() => {
@@ -221,10 +233,13 @@ export default function Reports() {
   };
 
   const openReportModal = () => {
-    if (!user) {
-      setAuthModalOpen(true);
+    console.log("Report an Issue clicked. isAuthenticated:", isAuthenticated, "user:", user);
+    if (!isAuthenticated || !user) {
+      console.log("User not logged in. Redirecting to /login...");
+      navigate("/login", { state: { from: "/reports", openReportModal: true } });
       return;
     }
+    console.log("User logged in. Opening report modal.");
     setFormError(null);
     setFormSuccessMsg(null);
     setIsReportModalOpen(true);
@@ -447,9 +462,9 @@ export default function Reports() {
             <button
               type="button"
               onClick={openReportModal}
-              className="rounded-xs bg-destructive px-5 py-2.5 text-xs font-bold tracking-[0.08em] text-white hover:bg-destructive/90 transition-colors shadow-xs shrink-0 cursor-pointer flex items-center gap-1.5"
+              className="rounded-xs bg-destructive px-5 py-2.5 text-xs font-bold tracking-[0.08em] text-white hover:bg-destructive/90 transition-colors shadow-xs shrink-0 cursor-pointer"
             >
-              <span>🚩</span> Report an Issue
+              Report an Issue
             </button>
           </div>
 
@@ -458,7 +473,7 @@ export default function Reports() {
           </p>
 
           {/* User's Submitted Concerns List */}
-          {user && myReports.length > 0 && (
+          {isAuthenticated && user && myReports.length > 0 && (
             <div className="mt-6 border-t border-rule pt-4">
               <h3 className="label-caps text-institutional mb-3">My Submitted Concerns ({myReports.length})</h3>
               <div className="space-y-2">

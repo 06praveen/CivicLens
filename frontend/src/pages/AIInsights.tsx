@@ -311,28 +311,18 @@ export default function AIInsights() {
                           </div>
                         </div>
 
-                        {/* Card Footer & Source Traceability (Step 15) */}
-                        <div className="mt-4 pt-2.5 border-t border-rule space-y-1.5">
-                          <div className="flex items-center justify-between text-[0.7rem]">
-                            <span className="font-mono text-muted-foreground text-[0.65rem] truncate max-w-[200px]" title={anom.budget_item_key}>
-                              Key: {anom.budget_item_key}
-                            </span>
-                            <button
-                              type="button"
-                              onClick={(e) => {
-                                e.stopPropagation();
-                                handleItemClick(anom.budget_item_key, anom.budget_item || anom.budget_item_key, anom.financial_year);
-                              }}
-                              className="text-saffron-dark font-extrabold hover:underline flex items-center gap-1 shrink-0"
-                            >
-                              📊 View Historical Trend →
-                            </button>
-                          </div>
-                          {anom.source_file && (
-                            <p className="text-[0.65rem] font-mono text-muted-foreground/80 truncate">
-                              📜 Source File: {anom.source_file} {anom.source_record_ids && anom.source_record_ids.length > 0 ? `(Record #${anom.source_record_ids.join(", #")})` : ""}
-                            </p>
-                          )}
+                        {/* Card Footer */}
+                        <div className="mt-4 pt-2.5 border-t border-rule flex items-center justify-end text-[0.7rem]">
+                          <button
+                            type="button"
+                            onClick={(e) => {
+                              e.stopPropagation();
+                              handleItemClick(anom.budget_item_key, anom.budget_item || anom.budget_item_key, anom.financial_year);
+                            }}
+                            className="text-saffron-dark font-extrabold hover:underline flex items-center gap-1 shrink-0 cursor-pointer"
+                          >
+                            📊 View Historical Trend →
+                          </button>
                         </div>
 
                       </div>
@@ -415,7 +405,7 @@ export default function AIInsights() {
               {/* Header */}
               <div className="flex items-start justify-between border-b border-rule pb-3">
                 <div>
-                  <span className="label-caps text-saffron font-mono">Item Key: {activeItemKey}</span>
+                  <span className="label-caps text-saffron">Historical Budget Analysis</span>
                   <h2 className="text-xl font-bold text-institutional mt-1">{activeItemName}</h2>
                   <p className="text-xs text-muted-foreground mt-0.5">Year-by-Year Budget Outlays & Grounded Agentic AI Analysis</p>
                 </div>
