@@ -2,7 +2,7 @@
 CivicLens Backend Admin API Router — Role-Based Access Control Protected
 Requires role == 'admin' for all operations. Returns 403 Forbidden for non-admin users.
 """
-from fastapi import APIRouter, Depends, HTTPException, status
+from fastapi import APIRouter, Depends, HTTPException, Query, status
 from sqlalchemy.orm import Session
 from sqlalchemy import func
 
@@ -58,3 +58,74 @@ def upload_budget_data(
         "message": f"Dataset action authorized by admin '{admin_user.email}'.",
         "payload": payload
     }
+
+
+# ====================================================
+# ADMIN BUDGET ISSUE REPORT MANAGEMENT ENDPOINTS
+# ====================================================
+
+from typing import List, Optional
+from app.schemas.report import IssueReportResponse, IssueReportUpdateAdmin
+from app.services.report_issue_service import ReportIssueService
+
+
+@router.get(
+    "/reports",
+    response_model=List[IssueReportResponse],
+    summary="List all citizen budget issue reports (Admin Only)",
+    description="Admin-only endpoint to review submitted citizen concern reports with optional filters."
+)
+def list_admin_issue_reports(
+    status_filter: Optional[str] = Query(None, alias="status"),
+    category_filter: Optional[str] = Query(None, alias="category"),
+    fy_filter: Optional[str] = Query(None, alias="financial_year"),
+    priority_filter: Optional[str] = Query(None, alias="priority"),
+    admin_user: User = Depends(require_admin),
+    db: Session = Depends(get_db)
+):
+    return ReportIssueService.get_admin_reports(
+        db=db,
+        status_filter=status_filter,
+        category_filter=category_filter,
+        fy_filter=fy_filter,
+        priority_filter=priority_filter
+    )
+
+
+@router.get(
+    "/reports/{report_id}",
+    response_model=IssueReportResponse,
+    summary="Get single issue report details (Admin Only)"
+)
+def get_admin_issue_report_detail(
+    report_id: int,
+    admin_user: User = Depends(require_admin),
+    db: Session = Depends(get_db)
+):
+    report = ReportIssueService.get_report_detail(db, report_id)
+    if not report:
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND,
+            detail=f"Budget issue report #{report_id} not found"
+        )
+    return report
+
+
+@router.patch(
+    "/reports/{report_id}",
+    response_model=IssueReportResponse,
+    summary="Update issue report status, priority, or admin notes (Admin Only)"
+)
+def update_admin_issue_report(
+    report_id: int,
+    payload: IssueReportUpdateAdmin,
+    admin_user: User = Depends(require_admin),
+    db: Session = Depends(get_db)
+):
+    updated = ReportIssueService.update_report_admin(db, report_id, payload, admin_user)
+    if not updated:
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND,
+            detail=f"Budget issue report #{report_id} not found"
+        )
+    return updated

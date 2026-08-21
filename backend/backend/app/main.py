@@ -2,7 +2,7 @@ from fastapi import FastAPI, status
 from fastapi.middleware.cors import CORSMiddleware
 from app.config import settings
 from app.database import check_db_connection
-from app.routers import budgets, analysis, investigations, rag, assistant, reports, auth, admin
+from app.routers import budgets, analysis, investigations, rag, assistant, reports, auth, admin, voice, issue_reports
 
 app = FastAPI(
     title=settings.APP_TITLE,
@@ -31,6 +31,8 @@ app.include_router(assistant.router)
 app.include_router(reports.router)
 app.include_router(auth.router)
 app.include_router(admin.router)
+app.include_router(voice.router)
+app.include_router(issue_reports.router)
 
 
 

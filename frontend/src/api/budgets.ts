@@ -214,3 +214,109 @@ export async function askAssistant(payload: {
 export async function getAssistantHealth(): Promise<any> {
   return fetchApi<any>("/api/assistant/health");
 }
+
+export async function transcribeAudio(audioBlob: Blob, language: string = "en-IN"): Promise<{ transcript: string; provider?: string }> {
+  const formData = new FormData();
+  formData.append("file", audioBlob, "speech.webm");
+  formData.append("language", language);
+
+  const API_BASE = import.meta.env.VITE_API_BASE_URL || "";
+  const url = `${API_BASE}/api/voice/transcribe`;
+
+  const token = localStorage.getItem("civiclens_auth_token");
+  const headers: Record<string, string> = {};
+  if (token) {
+    headers["Authorization"] = `Bearer ${token}`;
+  }
+
+  const res = await fetch(url, {
+    method: "POST",
+    headers,
+    body: formData,
+  });
+
+  if (!res.ok) {
+    const errorData = await res.json().catch(() => ({ detail: `Voice transcription failed (${res.status})` }));
+    throw new Error(errorData.detail || `Voice transcription failed (${res.status})`);
+  }
+
+  return await res.json();
+}
+
+export async function getReportOptions(): Promise<{ financial_years: string[]; ministries_departments: string[]; categories: string[] }> {
+  return fetchApi<{ financial_years: string[]; ministries_departments: string[]; categories: string[] }>("/api/reports/options");
+}
+
+export async function createIssueReport(payload: {
+  issue_category: string;
+  financial_year?: string;
+  ministry_department?: string;
+  budget_item?: string;
+  issue_title: string;
+  description: string;
+  evidence_reference?: string;
+  is_anonymous: boolean;
+  declaration: boolean;
+}): Promise<any> {
+  const token = localStorage.getItem("civiclens_auth_token");
+  const headers: Record<string, string> = {};
+  if (token) {
+    headers["Authorization"] = `Bearer ${token}`;
+  }
+  return fetchApi<any>("/api/reports", {
+    method: "POST",
+    headers,
+    body: JSON.stringify(payload),
+  });
+}
+
+export async function getMyReports(): Promise<any[]> {
+  const token = localStorage.getItem("civiclens_auth_token");
+  const headers: Record<string, string> = {};
+  if (token) {
+    headers["Authorization"] = `Bearer ${token}`;
+  }
+  return fetchApi<any[]>("/api/reports/my-reports", {
+    headers,
+  });
+}
+
+export async function getAdminReports(params: {
+  status?: string;
+  category?: string;
+  financial_year?: string;
+  priority?: string;
+} = {}): Promise<any[]> {
+  const token = localStorage.getItem("civiclens_auth_token");
+  const headers: Record<string, string> = {};
+  if (token) {
+    headers["Authorization"] = `Bearer ${token}`;
+  }
+  const query = new URLSearchParams();
+  if (params.status && params.status !== "all") query.append("status", params.status);
+  if (params.category) query.append("category", params.category);
+  if (params.financial_year) query.append("financial_year", params.financial_year);
+  if (params.priority) query.append("priority", params.priority);
+
+  const qs = query.toString();
+  return fetchApi<any[]>(`/api/admin/reports${qs ? "?" + qs : ""}`, {
+    headers,
+  });
+}
+
+export async function updateAdminReport(reportId: number, payload: {
+  status?: string;
+  priority?: string;
+  admin_notes?: string;
+}): Promise<any> {
+  const token = localStorage.getItem("civiclens_auth_token");
+  const headers: Record<string, string> = {};
+  if (token) {
+    headers["Authorization"] = `Bearer ${token}`;
+  }
+  return fetchApi<any>(`/api/admin/reports/${reportId}`, {
+    method: "PATCH",
+    headers,
+    body: JSON.stringify(payload),
+  });
+}

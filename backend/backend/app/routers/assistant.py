@@ -30,6 +30,7 @@ def ask_assistant(
     db: Session = Depends(get_db)
 ):
     try:
+        print(f"CHAT QUESTION RECEIVED: '{payload.question}' (Session: {payload.session_id})")
         result = AssistantService.ask_assistant(
             db=db,
             question=payload.question,

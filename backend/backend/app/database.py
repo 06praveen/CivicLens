@@ -62,6 +62,7 @@ def get_auth_engine():
             AuthSessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=auth_engine)
             # Create user tables if not exist
             from app.models.user import User  # noqa
+            from app.models.report import BudgetIssueReport  # noqa
             Base.metadata.create_all(bind=auth_engine)
             try:
                 db_bootstrap = AuthSessionLocal()

@@ -1,7 +1,7 @@
 import { useState, useRef, useEffect } from "react";
 import { useApp } from "@/context/AppContext";
 import { PageLayout } from "@/components/PageLayout";
-import { askAssistant } from "@/api/budgets";
+import { askAssistant, transcribeAudio } from "@/api/budgets";
 import type { AssistantResponse, AssistantSource, AssistantOption } from "@/api/types";
 
 interface Message {
@@ -85,6 +85,14 @@ const WELCOME: Message = {
   timestamp: new Date(),
 };
 
+/**
+ * Safely resolves browser Web Speech API constructor (supports standard & webkit prefix)
+ */
+function getSpeechRecognitionConstructor(): (new () => SpeechRecognition) | null {
+  if (typeof window === "undefined") return null;
+  return window.SpeechRecognition || window.webkitSpeechRecognition || null;
+}
+
 export default function AskCivicLens() {
   const { t } = useApp();
   const [messages, setMessages] = useState<Message[]>([WELCOME]);
@@ -92,14 +100,26 @@ export default function AskCivicLens() {
   const [isTyping, setIsTyping] = useState(false);
   const [sessionId, setSessionId] = useState<string | undefined>(undefined);
 
-  // Voice Recognition States
+  // Dual-Engine Voice Recognition States
   const [isListening, setIsListening] = useState(false);
+  const [voiceEngine, setVoiceEngine] = useState<"native" | "fallback_recording" | "fallback_uploading">("native");
+  const [voiceStatusText, setVoiceStatusText] = useState<string>("");
   const [voiceLang, setVoiceLang] = useState<"en-IN" | "hi-IN">("en-IN");
   const [voiceError, setVoiceError] = useState<string | null>(null);
 
   const bottomRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
-  const recognitionRef = useRef<any>(null);
+
+  // Speech Recognition & MediaRecorder Context Refs
+  const recognitionRef = useRef<SpeechRecognition | null>(null);
+  const mediaRecorderRef = useRef<MediaRecorder | null>(null);
+  const mediaStreamRef = useRef<MediaStream | null>(null);
+  const audioChunksRef = useRef<Blob[]>([]);
+
+  const baseInputRef = useRef<string>("");
+  const isMountedRef = useRef<boolean>(true);
+  const isListeningRef = useRef<boolean>(false);
+  const isStartingRef = useRef<boolean>(false);
 
   const suggestedQs = [
     t("ask_q1"), t("ask_q2"), t("ask_q3"), t("ask_q4"), t("ask_q5"),
@@ -109,73 +129,322 @@ export default function AskCivicLens() {
     bottomRef.current?.scrollIntoView({ behavior: "smooth" });
   }, [messages, isTyping]);
 
-  // Web Speech API Voice Recognition Setup
+  // Cleanup on component unmount
   useEffect(() => {
-    const SpeechRecognition = (window as any).SpeechRecognition || (window as any).webkitSpeechRecognition;
-    if (SpeechRecognition) {
-      const recognition = new SpeechRecognition();
-      recognition.continuous = false;
-      recognition.interimResults = true;
-      recognition.lang = voiceLang;
+    isMountedRef.current = true;
+    return () => {
+      isMountedRef.current = false;
+      isListeningRef.current = false;
+      isStartingRef.current = false;
 
-      recognition.onstart = () => {
+      if (recognitionRef.current) {
+        try { recognitionRef.current.abort(); } catch (e) {}
+      }
+      if (mediaRecorderRef.current && mediaRecorderRef.current.state !== "inactive") {
+        try { mediaRecorderRef.current.stop(); } catch (e) {}
+      }
+      if (mediaStreamRef.current) {
+        try {
+          mediaStreamRef.current.getTracks().forEach(track => track.stop());
+        } catch (e) {}
+      }
+    };
+  }, []);
+
+  /**
+   * FALLBACK ENGINE: Uses MediaRecorder + getUserMedia -> POST /api/voice/transcribe
+   */
+  async function startFallbackRecorder() {
+    // Ensure native recognition is completely stopped
+    if (recognitionRef.current) {
+      try { recognitionRef.current.abort(); } catch (e) {}
+    }
+
+    setVoiceError(null);
+    baseInputRef.current = input;
+
+    try {
+      const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+      mediaStreamRef.current = stream;
+
+      const mimeType = MediaRecorder.isTypeSupported("audio/webm;codecs=opus")
+        ? "audio/webm;codecs=opus"
+        : MediaRecorder.isTypeSupported("audio/webm")
+        ? "audio/webm"
+        : MediaRecorder.isTypeSupported("audio/mp4")
+        ? "audio/mp4"
+        : "";
+
+      const recorder = mimeType ? new MediaRecorder(stream, { mimeType }) : new MediaRecorder(stream);
+      mediaRecorderRef.current = recorder;
+      audioChunksRef.current = [];
+
+      recorder.ondataavailable = (event: BlobEvent) => {
+        if (event.data && event.data.size > 0) {
+          audioChunksRef.current.push(event.data);
+        }
+      };
+
+      recorder.onstop = async () => {
+        // Release hardware microphone stream immediately
+        if (mediaStreamRef.current) {
+          mediaStreamRef.current.getTracks().forEach(track => track.stop());
+          mediaStreamRef.current = null;
+        }
+
+        const chunks = audioChunksRef.current;
+        if (chunks.length === 0) {
+          setIsListening(false);
+          isListeningRef.current = false;
+          setVoiceEngine("native");
+          setVoiceStatusText("");
+          return;
+        }
+
+        const audioBlob = new Blob(chunks, { type: mimeType || "audio/webm" });
+        setVoiceEngine("fallback_uploading");
+        setVoiceStatusText("Processing your voice...");
+
+        try {
+          const res = await transcribeAudio(audioBlob, voiceLang);
+          if (res.transcript) {
+            console.log("RAW VOICE RESULT (Fallback):", res.transcript);
+            const base = baseInputRef.current ? baseInputRef.current.trim() : "";
+            const text = res.transcript.trim();
+            const newInput = base ? `${base} ${text}` : text;
+            console.log("VOICE INPUT SET TO:", newInput);
+            setInput(newInput);
+          } else if (res.error) {
+            setVoiceError(res.error);
+          }
+        } catch (err: any) {
+          console.error("Fallback transcription error:", err);
+          setVoiceError("Failed to transcribe audio. Please try typing your question.");
+        } finally {
+          setIsListening(false);
+          isListeningRef.current = false;
+          setVoiceEngine("native");
+          setVoiceStatusText("");
+        }
+      };
+
+      recorder.start(250); // Collect audio slices every 250ms
+      isListeningRef.current = true;
+      setIsListening(true);
+      setVoiceEngine("fallback_recording");
+      setVoiceStatusText("Recording... Click to stop");
+    } catch (err: any) {
+      console.error("Microphone getUserMedia error:", err);
+      setIsListening(false);
+      isListeningRef.current = false;
+      setVoiceEngine("native");
+      setVoiceStatusText("");
+
+      if (err.name === "NotAllowedError" || err.name === "PermissionDeniedError") {
+        setVoiceError("Microphone permission was denied. Please allow microphone access in your browser settings and try again.");
+      } else {
+        setVoiceError("No microphone found or microphone is unavailable. Check your device settings.");
+      }
+    }
+  }
+
+  /**
+   * Lazily initializes and returns the single SpeechRecognition instance
+   */
+  const getOrCreateRecognition = (): SpeechRecognition | null => {
+    if (recognitionRef.current) return recognitionRef.current;
+
+    const SpeechRecognitionClass = getSpeechRecognitionConstructor();
+    if (!SpeechRecognitionClass) return null;
+
+    try {
+      const rec = new SpeechRecognitionClass();
+      rec.continuous = false;
+      rec.interimResults = true;
+      rec.maxAlternatives = 1;
+      rec.lang = voiceLang;
+
+      rec.onstart = () => {
+        if (!isMountedRef.current) return;
+        isListeningRef.current = true;
+        isStartingRef.current = false;
         setIsListening(true);
+        setVoiceEngine("native");
+        setVoiceStatusText("Listening...");
         setVoiceError(null);
       };
 
-      recognition.onresult = (event: any) => {
-        let transcript = "";
-        for (let i = event.resultIndex; i < event.results.length; i++) {
-          transcript += event.results[i][0].transcript;
+      rec.onresult = (event: SpeechRecognitionEvent) => {
+        if (!isMountedRef.current) return;
+
+        let finalTranscript = "";
+        let interimTranscript = "";
+
+        for (let i = 0; i < event.results.length; i++) {
+          const result = event.results[i];
+          const text = result[0]?.transcript || "";
+          if (result.isFinal) {
+            finalTranscript += text + " ";
+          } else {
+            interimTranscript += text + " ";
+          }
         }
-        if (transcript) {
-          setInput(transcript);
+
+        const base = baseInputRef.current ? baseInputRef.current.trim() : "";
+        const recognized = (finalTranscript + interimTranscript).trim();
+
+        if (recognized) {
+          console.log("RAW VOICE RESULT (Native):", recognized);
+          const newInput = base ? `${base} ${recognized}` : recognized;
+          console.log("VOICE INPUT SET TO:", newInput);
+          setInput(newInput);
         }
       };
 
-      recognition.onerror = (event: any) => {
-        console.warn("Speech recognition error:", event.error);
+      rec.onerror = (event: SpeechRecognitionErrorEvent) => {
+        console.error("Native SpeechRecognition error:", event.error, event);
+        if (!isMountedRef.current) return;
+
+        isListeningRef.current = false;
+        isStartingRef.current = false;
+
+        // Auto-switch to MediaRecorder backend fallback on network/service failure
+        if (event.error === "network" || event.error === "service-not-allowed" || event.error === "audio-capture") {
+          console.warn("Native SpeechRecognition failed with network/service error. Switching to MediaRecorder fallback pipeline...");
+          try { rec.abort(); } catch (e) {}
+          startFallbackRecorder();
+          return;
+        }
+
         setIsListening(false);
-        if (event.error === "not-allowed") {
-          setVoiceError("Microphone permission denied.");
-        } else if (event.error === "no-speech") {
-          setVoiceError("No speech detected.");
-        } else {
-          setVoiceError("Speech recognition failed. Try typing your question.");
+        setVoiceEngine("native");
+        setVoiceStatusText("");
+
+        switch (event.error) {
+          case "not-allowed":
+            setVoiceError("Microphone permission was denied. Please allow microphone access in your browser settings and try again.");
+            break;
+          case "no-speech":
+            setVoiceError("No speech was detected. Please try again.");
+            break;
+          case "language-not-supported":
+          case "language-unavailable":
+            setVoiceError("The selected voice language is currently unavailable.");
+            break;
+          case "aborted":
+            break;
+          default:
+            setVoiceError(`Speech recognition failed (${event.error}). Please try typing your question.`);
+            break;
         }
       };
 
-      recognition.onend = () => {
-        setIsListening(false);
+      rec.onend = () => {
+        if (!isMountedRef.current) return;
+        if (voiceEngine === "native") {
+          isListeningRef.current = false;
+          isStartingRef.current = false;
+          setIsListening(false);
+          setVoiceStatusText("");
+        }
       };
 
-      recognitionRef.current = recognition;
-    } else {
-      recognitionRef.current = null;
+      recognitionRef.current = rec;
+      return rec;
+    } catch (err) {
+      console.error("Failed to construct SpeechRecognition instance:", err);
+      return null;
     }
-  }, [voiceLang]);
+  };
 
+  /**
+   * Main Microphone Toggle Action (Native Web Speech -> MediaRecorder Fallback)
+   */
   const toggleVoiceInput = () => {
-    if (!recognitionRef.current) {
-      setVoiceError("Voice input is not supported by this browser.");
+    // If currently recording in MediaRecorder fallback mode -> stop recording & transcribe
+    if (voiceEngine === "fallback_recording") {
+      if (mediaRecorderRef.current && mediaRecorderRef.current.state !== "inactive") {
+        try { mediaRecorderRef.current.stop(); } catch (e) {}
+      }
       return;
     }
 
-    if (isListening) {
-      recognitionRef.current.stop();
-    } else {
-      setVoiceError(null);
-      try {
-        recognitionRef.current.lang = voiceLang;
-        recognitionRef.current.start();
-      } catch (err) {
-        console.warn("Failed to start speech recognition:", err);
+    // If uploading fallback audio -> ignore duplicate clicks
+    if (voiceEngine === "fallback_uploading") {
+      return;
+    }
+
+    const SpeechRecognitionClass = getSpeechRecognitionConstructor();
+    if (!SpeechRecognitionClass) {
+      // Browser lacks Web Speech API -> use MediaRecorder Fallback directly
+      startFallbackRecorder();
+      return;
+    }
+
+    const rec = getOrCreateRecognition();
+    if (!rec) {
+      startFallbackRecorder();
+      return;
+    }
+
+    // If currently listening in native mode -> stop listening
+    if (isListeningRef.current || isStartingRef.current) {
+      try { rec.stop(); } catch (e) { try { rec.abort(); } catch (e2) {} }
+      isListeningRef.current = false;
+      isStartingRef.current = false;
+      setIsListening(false);
+      setVoiceEngine("native");
+      setVoiceStatusText("");
+      return;
+    }
+
+    // Start native recognition
+    setVoiceError(null);
+    baseInputRef.current = input;
+    isStartingRef.current = true;
+    rec.lang = voiceLang;
+
+    try {
+      rec.start();
+    } catch (err: any) {
+      console.error("Native recognition start error:", err);
+      isStartingRef.current = false;
+      isListeningRef.current = false;
+      setIsListening(false);
+
+      if (err.name === "InvalidStateError" || err.message?.includes("already started")) {
+        try { rec.stop(); } catch (e) {}
+      } else {
+        // Fallback to MediaRecorder audio recording pipeline
+        startFallbackRecorder();
       }
+    }
+  };
+
+  const handleLanguageChange = (newLang: "en-IN" | "hi-IN") => {
+    setVoiceLang(newLang);
+    if (recognitionRef.current) {
+      recognitionRef.current.lang = newLang;
     }
   };
 
   async function sendMessage(text: string) {
     if (!text.trim()) return;
+
+    console.log("MESSAGE BEING SENT TO CHAT:", text);
+
+    // Stop voice recognition or recording if active when submitting
+    if (isListeningRef.current) {
+      if (voiceEngine === "fallback_recording" && mediaRecorderRef.current && mediaRecorderRef.current.state !== "inactive") {
+        try { mediaRecorderRef.current.stop(); } catch (e) {}
+      } else if (recognitionRef.current) {
+        try { recognitionRef.current.stop(); } catch (e) {}
+      }
+      isListeningRef.current = false;
+      isStartingRef.current = false;
+      setIsListening(false);
+    }
+
     const userMsg: Message = { role: "user", content: text, timestamp: new Date() };
     setMessages(prev => [...prev, userMsg]);
     setInput("");
@@ -263,8 +532,8 @@ export default function AskCivicLens() {
               <h3 className="label-caps text-muted-foreground mb-2">Voice Input Language</h3>
               <select
                 value={voiceLang}
-                onChange={e => setVoiceLang(e.target.value as "en-IN" | "hi-IN")}
-                className="w-full text-xs font-bold border border-rule bg-background p-2 rounded-xs focus:outline-none"
+                onChange={e => handleLanguageChange(e.target.value as "en-IN" | "hi-IN")}
+                className="w-full text-xs font-bold border border-rule bg-background p-2 rounded-xs focus:outline-none cursor-pointer"
               >
                 <option value="en-IN">English (India)</option>
                 <option value="hi-IN">Hindi (हिन्दी)</option>
@@ -284,7 +553,7 @@ export default function AskCivicLens() {
                   }`}>
                     {msg.role === "assistant" ? (
                       <div className="space-y-2">
-                        {/* Transparency Source Indicator Badge (Requirement 4) */}
+                        {/* Transparency Source Indicator Badge */}
                         {msg.sourceIndicator && (
                           <div className="flex items-center justify-between border-b border-rule pb-1.5 mb-2">
                             <span className={`px-2 py-0.5 rounded-full text-[0.65rem] font-extrabold uppercase ${
@@ -387,24 +656,43 @@ export default function AskCivicLens() {
             </div>
 
             {voiceError && (
-              <p className="mt-2 text-xs text-destructive font-semibold">⚠️ {voiceError}</p>
+              <p className="mt-2 text-xs text-destructive font-semibold flex items-center gap-1">
+                <span>⚠️</span> {voiceError}
+              </p>
             )}
 
             {/* Input Form with Microphone Button */}
             <form onSubmit={handleSubmit} className="mt-3 flex gap-2 items-center">
-              {/* Voice Microphone Button */}
+              {/* Dual-Engine Voice Microphone Button */}
               <button
                 type="button"
                 onClick={toggleVoiceInput}
-                title="Speak your question"
-                aria-label="Speak your question"
-                className={`p-2.5 rounded-xs border transition-all flex items-center justify-center shrink-0 cursor-pointer ${
-                  isListening
-                    ? "bg-destructive text-white border-destructive animate-pulse"
+                disabled={voiceEngine === "fallback_uploading"}
+                title={isListening ? (voiceStatusText || "Click to stop") : "Speak your question"}
+                aria-label={isListening ? (voiceStatusText || "Click to stop") : "Speak your question"}
+                className={`p-2.5 rounded-xs border transition-all flex items-center justify-center shrink-0 cursor-pointer font-bold text-xs ${
+                  voiceEngine === "fallback_uploading"
+                    ? "bg-muted text-muted-foreground border-rule cursor-wait"
+                    : isListening
+                    ? "bg-destructive text-white border-destructive animate-pulse shadow-md"
                     : "bg-background hover:bg-institutional/10 text-institutional border-rule"
                 }`}
               >
-                {isListening ? "🔴 Listening..." : "🎤 Speak"}
+                {voiceEngine === "fallback_uploading" ? (
+                  <span className="flex items-center gap-1.5">
+                    <span className="h-2 w-2 rounded-full bg-muted-foreground animate-ping" />
+                    Processing...
+                  </span>
+                ) : isListening ? (
+                  <span className="flex items-center gap-1.5">
+                    <span className="h-2 w-2 rounded-full bg-white animate-ping" />
+                    {voiceStatusText || "Listening..."}
+                  </span>
+                ) : (
+                  <span className="flex items-center gap-1">
+                    🎤 Speak
+                  </span>
+                )}
               </button>
 
               <input
