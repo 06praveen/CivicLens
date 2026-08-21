@@ -215,9 +215,10 @@ export async function getAssistantHealth(): Promise<any> {
   return fetchApi<any>("/api/assistant/health");
 }
 
-export async function transcribeAudio(audioBlob: Blob, language: string = "en-IN"): Promise<{ transcript: string; provider?: string }> {
+export async function transcribeAudio(audioBlob: Blob, language: string = "en-IN"): Promise<{ transcript: string; provider?: string; error?: string }> {
+  const ext = audioBlob.type.includes("mp4") ? "mp4" : audioBlob.type.includes("ogg") ? "ogg" : "webm";
   const formData = new FormData();
-  formData.append("file", audioBlob, "speech.webm");
+  formData.append("file", audioBlob, `speech.${ext}`);
   formData.append("language", language);
 
   const API_BASE = import.meta.env.VITE_API_BASE_URL || "";

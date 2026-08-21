@@ -198,12 +198,22 @@ export default function AskCivicLens() {
           isListeningRef.current = false;
           setVoiceEngine("native");
           setVoiceStatusText("");
+          setVoiceError("No speech detected. Please try again.");
           return;
         }
 
         const audioBlob = new Blob(chunks, { type: mimeType || "audio/webm" });
+        if (audioBlob.size < 200) {
+          setIsListening(false);
+          isListeningRef.current = false;
+          setVoiceEngine("native");
+          setVoiceStatusText("");
+          setVoiceError("No speech detected. Please try again.");
+          return;
+        }
+
         setVoiceEngine("fallback_uploading");
-        setVoiceStatusText("Processing your voice...");
+        setVoiceStatusText("Transcribing your question...");
 
         try {
           const res = await transcribeAudio(audioBlob, voiceLang);
